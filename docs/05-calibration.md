@@ -2,9 +2,9 @@
 
 Calibration is done **once per IMU** (values are saved to the MCU flash). Re-run it only if you swap IMUs between trackers or after a firmware change that resets calibration.
 
-## ICM-45686 / LSM6DSR / LSM6DSV (SoftFusion IMUs) — 6-side calibration
+## LSM6DSR / ICM-45686 / LSM6DSV (SoftFusion IMUs) — 6-side calibration
 
-These are the recommended IMUs for this build. They use the SoftFusion 6-side calibration:
+These are the recommended IMUs for this build (LSM6DSR is the chosen one). They use the SoftFusion 6-side calibration:
 
 1. **Warm the tracker to operating temperature** first (wear it a few minutes, ~30–40°C) for the best result.
 2. Power up with the IMU **lying flat on a stable surface** (or press reset).

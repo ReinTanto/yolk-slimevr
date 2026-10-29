@@ -23,13 +23,13 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 | Part | Pick |
 |---|---|
 | MCU | Kyware ESP8266 (NodeMCU-style, CH340, micro USB + Type-C) |
-| IMU | **ICM-45686** (SlimeVR Mumo Breakout Module, + QMC6309) — *budget: LSM6DSR* |
+| IMU | **LSM6DSR** (6-axis, I²C — cheap on Tokopedia) — *upgrade: ICM-45686 Mumo* |
 | Battery | Pouch LiPo 1S 3.7V 1000–2000 mAh (hot-swappable, JST-PH) |
 | Charger | TP4056 module (Type-C, with protection) |
 | Step-up | MT3608 module (3.7V → 5V) |
 | Case | 3D-printed (designed around the parts) |
 
-> The original GY-BMI160s were misplaced, so the IMU is now a purchase. The ICM-45686 is the SlimeVR-recommended top pick; the LSM6DSR is the budget pick. See [docs/02-parts-list.md](docs/02-parts-list.md).
+> The original GY-BMI160s were misplaced, so the IMU is now a purchase. The **LSM6DSR** (SlimeVR-recommended budget pick, cheap on Tokopedia) is chosen; the ICM-45686 is the upgrade path. See [docs/02-parts-list.md](docs/02-parts-list.md).
 
 ## Tracker count
 

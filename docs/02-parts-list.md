@@ -7,8 +7,8 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | # | Part | Spec | Pick | Link | ~Price |
 |---|---|---|---|---|---|
 | 1 | **MCU** | ESP8266, CH340, micro USB + Type-C | Kyware ESP8266 NodeMCU-style | [Kyware ESP8266 board](https://www.tokopedia.com/kyware/kyware-esp8266-micro-usb-type-c-nodemcu-lua-ch340-v3-wifi-iot-esp-8266-develompent-board-esp-12-1730054147268510742) | — (owned) |
-| 2 | **IMU (recommended)** | ICM-45686 + QMC6309 breakout, I²C | **SlimeVR Mumo Breakout Module V1.1** (ICM-45686 + QMC6309) | [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) | ~$8.00 |
-| 2b | IMU (budget) | LSM6DSR + QMC6309 breakout, I²C | LSM6DSR module (AliExpress / Tokopedia) | search: "LSM6DSR module" / "LSM6DSR QMC6309" | ~$3.35 |
+| 2 | **IMU (chosen)** | LSM6DSR 6-axis breakout, I²C | **LSM6DSR module** (Tokopedia — cheap) | _[drop in the exact Tokopedia listing link]_ | ~$3.35 (Rp~55.000) |
+| 2b | IMU (upgrade) | ICM-45686 + QMC6309 breakout, I²C | **SlimeVR Mumo Breakout Module V1.1** | [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) | ~$8.00 |
 | 2c | IMU (fallback, if GY-BMI160 are found) | GY-BMI160, I²C | GY-BMI160 breakout | (previously owned, misplaced) | — |
 | 3 | **Battery** | Pouch LiPo 1S 3.7V 1000 mAh, **with PCM** | ZX 523450 (5×34×50 mm) | [ZX 523450 1000mAh with PCM](https://www.tokopedia.com/tokojelek01/zx-523450-1000mah-2c-2a-baterai-lipo-3-7v-dengan-pcm-2a-dan-kabel-55mm-503450-5mm-x-34mm-x-50mm-1730800359683425676) | Rp34.500 |
 | 3b | Battery (alt, more runtime) | Pouch LiPo 1S 3.7V 2000 mAh | PALO 103450 (10×34×50 mm) | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
@@ -25,14 +25,14 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 
 | Scenario | Per tracker | 5 trackers |
 |---|---|---|
-| Base (ICM-45686 Mumo + ZX 1000mAh + TP4056 + MT3608) | ~Rp110.000–120.000 | ~Rp550.000–600.000 |
-| Budget (LSM6DSR + ZX 1000mAh + TP4056 + MT3608) | ~Rp75.000–85.000 | ~Rp375.000–425.000 |
+| **Chosen (LSM6DSR + ZX 1000mAh + TP4056 + MT3608)** | ~Rp75.000–85.000 | ~Rp375.000–425.000 |
+| Upgrade (ICM-45686 Mumo + ZX 1000mAh + TP4056 + MT3608) | ~Rp110.000–120.000 | ~Rp550.000–600.000 |
 | With 2-in-1 charger+boost | +Rp5.000–10.000 | +Rp25.000–50.000 |
 | With PALO 2000mAh | +Rp35.000 | +Rp175.000 |
 
-(Excludes the MCU, which is owned. IMU is now a purchase — see the recommendation above.)
+(Excludes the MCU, which is owned. IMU is a purchase — see the recommendation above.)
 
-Approximate USD conversion: 1 USD ≈ Rp16.000. ICM-45686 Mumo ≈ $8, LSM6DSR ≈ $3.35.
+Approximate USD conversion: 1 USD ≈ Rp16.000. LSM6DSR ≈ $3.35, ICM-45686 Mumo ≈ $8.
 
 ## IMU recommendation
 
@@ -40,14 +40,14 @@ The original GY-BMI160s were misplaced, so the IMU is now a purchase. Per the [S
 
 | IMU | Tier | Price | Notes |
 |---|---|---|---|
-| **ICM-45686** | 🟢 Superior | ~$6.70–8.00 | **Best currently available.** Reliable, accurate, stays accurate the longest. Used in the official SlimeVR trackers. |
-| **LSM6DSV** | 🟢 Superior | ~$5.80 | About equal to ICM-45686; a bit more temperature-sensitive. |
-| **LSM6DSR** | 🟢 Affordable | ~$3.35 | **Recommended budget pick.** Slightly worse sensitivity, lower reset times (25–30 min). |
-| BMI160 | 🚫 Avoid | ~$1.50 | Outdated, high drift, ~2/10 DOA. Only as a fallback if the old ones are recovered. |
+| **LSM6DSR** ✅ chosen | 🟢 Affordable | ~$3.35 (Rp~55.000) | **Chosen — cheap on Tokopedia.** Recommended budget pick. Slightly worse sensitivity, reset times 25–30 min. |
+| ICM-45686 | 🟢 Superior | ~$6.70–8.00 | Best currently available (upgrade path). Used in the official SlimeVR trackers. |
+| LSM6DSV | 🟢 Superior | ~$5.80 | About equal to ICM-45686; a bit more temperature-sensitive. |
+| BMI160 | 🚫 Avoid | ~$1.50 | Outdated, high drift, ~2/10 DOA. Only a fallback if the old ones are recovered. |
 
-**Recommendation: ICM-45686** (best performance, and the [SlimeVR Mumo Breakout Module](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) is purpose-built for SlimeVR with a published schematic + STEP file for the case). **Budget alternative: LSM6DSR.**
+**Chosen: LSM6DSR** — the SlimeVR-recommended budget pick, and cheap on Tokopedia. It's a well-supported SoftFusion IMU (gyro + accel) in the firmware. If you later want the top performance, the upgrade path is the **ICM-45686** ([SlimeVR Mumo Breakout Module](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309), which ships with a published schematic + STEP file for the case).
 
-> **Mumo V1.1 note:** to use over I²C with an ESP, **jumpers 1–4 must be bridged together** on the module. The module is 1.2 mm thick (not the usual 1.6 mm) with castellated edges.
+> **LSM6DSR note:** I²C address is **0x69** (SDO/SA0→VCC) or **0x6A** (SDO/SA0→GND) depending on the module's SDO pin — the firmware auto-detects, but confirm the module's SDO connection. Many LSM6DSR breakouts also carry a QMC5883L/QMC6309 magnetometer; the standard SlimeVR setup runs 6DoF (gyro + accel), so the magnetometer is optional.
 
 ## Buying notes
 

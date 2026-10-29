@@ -15,8 +15,8 @@ Key settings for this build:
 
 ```c
 // IMU — pick the one you installed:
-#define IMU IMU_ICM45686     // recommended (SlimeVR Mumo / ICM-45686 + QMC6309)
-// #define IMU IMU_LSM6DSR    // budget alternative
+#define IMU IMU_LSM6DSR      // chosen (LSM6DSR 6-axis, cheap on Tokopedia)
+// #define IMU IMU_ICM45686   // upgrade (SlimeVR Mumo / ICM-45686 + QMC6309)
 // #define IMU IMU_BMI160     // fallback only, if the old GY-BMI160s are recovered
 
 // I2C pins (D1-Mini / NodeMCU style: D2=GPIO4 SDA, D1=GPIO5 SCL)
@@ -24,7 +24,8 @@ Key settings for this build:
 #define PIN_I2C_SCL 5
 
 // I2C address is usually auto-detected; set explicitly only if needed.
-// Mumo V1.1 (ICM-45686): bridge jumpers 1-4 together for I2C use.
+// LSM6DSR: 0x69 (SDO/SA0->VCC) or 0x6A (SDO/SA0->GND) — confirm the module's SDO.
+// Mumo V1.1 (ICM-45686, if used): bridge jumpers 1-4 together for I2C use.
 
 // WiFi
 #define WIFI_NAME "your-ssid"
