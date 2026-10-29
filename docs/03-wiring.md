@@ -63,6 +63,18 @@ Slide switch: in series with LiPo (+) or MT3608 VOUT+
 | GY-BMI160 CSB | GND |
 | Slide switch | in series with LiPo + or MT3608 VOUT+ |
 
+## Charging dock (for the removable cells)
+
+Because the battery is hot-swappable, recharge it in a **charging dock** rather than wiring a charger into each tracker. The dock is a standalone circuit:
+
+```
+USB (5V) ──→ TP4056 (VIN / GND)
+TP4056 (B+ / B−) ──→ JST-PH 2.0 socket
+Pouch cell (JST-PH plug) ──→ JST-PH 2.0 socket
+```
+
+The TP4056 charges the cell CC/CV to 4.2V (with protection). **No MT3608 in the dock** — it only charges the cell, it doesn't power the tracker. A 5-slot bank (5× TP4056, one 5V 5–10A supply) recharges all spare cells at once. Full design, workflow, and safety: see [10-charging-dock.md](10-charging-dock.md).
+
 ## Optional
 
 - **Battery voltage divider** → ESP8266 A0 (ADC), for battery % in the SlimeVR server.

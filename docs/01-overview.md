@@ -45,3 +45,4 @@ Pouch LiPo ──→ TP4056 (charge) ──→ MT3608 (3.7V→5V) ──→ ESP8
 4. Flash firmware (see [04-firmware.md](04-firmware.md))
 5. Calibrate IMUs (see [05-calibration.md](05-calibration.md))
 6. Set up server + SteamVR (see [08-server-setup.md](08-server-setup.md))
+7. Build the charging dock for the removable cells (see [10-charging-dock.md](10-charging-dock.md))
