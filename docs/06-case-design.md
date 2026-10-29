@@ -68,6 +68,6 @@ The case is designed from scratch in a CAD package (Fusion 360 / FreeCAD / Solid
 
 The [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) ships with a published **schematic** and **STEP file** for the case — use the STEP file to model the exact footprint. PCB is 1.2 mm thick with castellated edges (easier soldering). Pin header not included.
 
-## Charging dock (separate print)
+## Battery module (strap-held)
 
-The removable cells are recharged in a **charging dock** — a separate 3D-printed cradle (not part of the tracker case). Each slot holds a bare 523450 cell (52×34×5 mm) and a TP4056 module, with a JST-PH socket and an LED window. Print a **5-slot bank** fed from one 5V 5–10A supply. Design, layout, and workflow: see [10-charging-dock.md](10-charging-dock.md).
+The removable battery lives in a **small 3D-printed module** that sits **under the strap** — the strap holds the module against the tracker's body. No dock, no magnetic connector. The module holds the 523450 cell (52×34×5 mm) in a recessed slot with a JST-PH socket and a release tab. Design, layout, and workflow: see [10-battery-module.md](10-battery-module.md).

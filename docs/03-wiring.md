@@ -63,17 +63,9 @@ Slide switch: in series with LiPo (+) or MT3608 VOUT+
 | GY-BMI160 CSB | GND |
 | Slide switch | in series with LiPo + or MT3608 VOUT+ |
 
-## Charging dock (for the removable cells)
+## Battery module (strap-held)
 
-Because the battery is hot-swappable, recharge it in a **charging dock** rather than wiring a charger into each tracker. The dock is a standalone circuit:
-
-```
-USB (5V) ──→ TP4056 (VIN / GND)
-TP4056 (B+ / B−) ──→ JST-PH 2.0 socket
-Pouch cell (JST-PH plug) ──→ JST-PH 2.0 socket
-```
-
-The TP4056 charges the cell CC/CV to 4.2V (with protection). **No MT3608 in the dock** — it only charges the cell, it doesn't power the tracker. A 5-slot bank (5× TP4056, one 5V 5–10A supply) recharges all spare cells at once. Full design, workflow, and safety: see [10-charging-dock.md](10-charging-dock.md).
+The removable battery lives in a **small 3D-printed module** that sits **under the strap**. The strap holds the module in place — no dock, no magnetic connector. To swap the battery, unclip the module, pop the cell out (JST-PH), and drop in a charged one. Spare cells are charged off-tracker with a standalone TP4056. Full design, workflow, and safety: see [10-battery-module.md](10-battery-module.md).
 
 ## Optional
 
