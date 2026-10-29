@@ -1,5 +1,7 @@
 # 03 — Wiring
 
+> **Visual:** see the Draw.io wiring diagram — [`diagrams/wiring-diagram.drawio`](../diagrams/wiring-diagram.drawio) (open in [draw.io](https://app.diagrams.net) or the VS Code Draw.io Integration extension).
+
 ## Power chain (per tracker)
 
 ```
