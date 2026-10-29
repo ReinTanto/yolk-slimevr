@@ -7,11 +7,11 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | # | Part | Spec | Pick | Link | ~Price |
 |---|---|---|---|---|---|
 | 1 | **MCU** | ESP8266, CH340, micro USB + Type-C | Kyware ESP8266 NodeMCU-style | [Kyware ESP8266 board](https://www.tokopedia.com/kyware/kyware-esp8266-micro-usb-type-c-nodemcu-lua-ch340-v3-wifi-iot-esp-8266-develompent-board-esp-12-1730054147268510742) | — (owned) |
-| 2 | **IMU (chosen)** | LSM6DSR 6-axis breakout, I²C | **LSM6DSR module** (Tokopedia — cheap) | _[drop in the exact Tokopedia listing link]_ | ~$3.35 (Rp~55.000) |
+| 2 | **IMU (chosen)** | GY-LSM6DS3 6DoF module (LSM6DS3TR-C + e-compass), I²C | **GY-LSM6DS3** (Supreme, Tokopedia) | [GY-LSM6DS3 6DoF module](https://www.tokopedia.com/supreme/gy-lsm6ds3-6dof-6-axis-always-on-e-compass-accelerometer-gyroscope) | ~Rp30.000–50.000 |
 | 2b | IMU (upgrade) | ICM-45686 + QMC6309 breakout, I²C | **SlimeVR Mumo Breakout Module V1.1** | [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) | ~$8.00 |
 | 2c | IMU (fallback, if GY-BMI160 are found) | GY-BMI160, I²C | GY-BMI160 breakout | (previously owned, misplaced) | — |
-| 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V **1500 mAh**, 523450 (52×34×5 mm), **with PCM** | 523450 1500 mAh | _[drop in the exact Tokopedia listing link]_ | ~Rp40.000–55.000 |
-| 3b | Battery (alt, 1000 mAh) | Pouch LiPo 1S 3.7V 1000 mAh, 523450, with PCM | ZX 523450 (5×34×50 mm) | [ZX 523450 1000mAh with PCM](https://www.tokopedia.com/tokojelek01/zx-523450-1000mah-2c-2a-baterai-lipo-3-7v-dengan-pcm-2a-dan-kabel-55mm-503450-5mm-x-34mm-x-50mm-1730800359683425676) | Rp34.500 |
+| 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V **1000 mAh**, 523450 (52×34×5 mm) | 523450 1000 mAh (a16com, Tokopedia) | [523450 1000mAh 52×34mm](https://www.tokopedia.com/a16com/baterai-lithium-polimer-1000mah-523450-52x34mm) | ~Rp30.000–40.000 |
+| 3b | Battery (alt, 1500 mAh) | Pouch LiPo 1S 3.7V 1500 mAh, 523450 (52×34×5 mm) | 523450 1500 mAh | (higher-capacity 523450 variant) | ~Rp40.000–55.000 |
 | 3c | Battery (alt, 2000 mAh) | Pouch LiPo 1S 3.7V 2000 mAh, 103450 (10×34×50 mm) | PALO 103450 | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
 | 4 | **Charger** | TP4056, Type-C, with protection | TP4056 Type-C (Mirorim) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
 | 5 | **Step-up** | MT3608, 3.7V→5V, 2A | MT3608 module | [MT3608 (Proton Elcom)](https://www.tokopedia.com/proton-elcom/mt3608-kit-dc-dc-2a-step-up-boost-converter-power-module-mini-5-28v-dc) | ~Rp5.000–8.000 |
@@ -26,29 +26,31 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 
 | Scenario | Per tracker | 5 trackers |
 |---|---|---|
-| **Chosen (LSM6DSR + 523450 1500mAh + TP4056 + MT3608)** | ~Rp80.000–95.000 | ~Rp400.000–475.000 |
-| Upgrade (ICM-45686 Mumo + 523450 1500mAh + TP4056 + MT3608) | ~Rp115.000–130.000 | ~Rp575.000–650.000 |
+| **Chosen (GY-LSM6DS3 + 523450 1000mAh + TP4056 + MT3608)** | ~Rp70.000–90.000 | ~Rp350.000–450.000 |
+| Upgrade (ICM-45686 Mumo + 523450 1000mAh + TP4056 + MT3608) | ~Rp110.000–130.000 | ~Rp550.000–650.000 |
 | With 2-in-1 charger+boost | +Rp5.000–10.000 | +Rp25.000–50.000 |
-| With PALO 2000mAh (103450) | +Rp25.000–35.000 | +Rp125.000–175.000 |
+| With 523450 1500mAh | +Rp10.000–20.000 | +Rp50.000–100.000 |
+| With PALO 2000mAh (103450) | +Rp30.000–40.000 | +Rp150.000–200.000 |
 
 (Excludes the MCU, which is owned. IMU + battery are purchases — see the recommendations above.)
 
-Approximate USD conversion: 1 USD ≈ Rp16.000. LSM6DSR ≈ $3.35, 523450 1500mAh ≈ $3–4, ICM-45686 Mumo ≈ $8.
+Approximate USD conversion: 1 USD ≈ Rp16.000. GY-LSM6DS3 ≈ $2–3, 523450 1000mAh ≈ $2–3, ICM-45686 Mumo ≈ $8.
 
 ## IMU recommendation
 
-The original GY-BMI160s were misplaced, so the IMU is now a purchase. Per the [SlimeVR IMU comparison](https://docs.slimevr.dev/diy/imu-comparison.html):
+The original GY-BMI160s were misplaced, so the IMU is now a purchase. Per the [SlimeVR IMU comparison](https://docs.slimevr.dev/diy/imu-comparison.html) and the [firmware compatibility list](https://github.com/SlimeVR/SlimeVR-Tracker-ESP):
 
 | IMU | Tier | Price | Notes |
 |---|---|---|---|
-| **LSM6DSR** ✅ chosen | 🟢 Affordable | ~$3.35 (Rp~55.000) | **Chosen — cheap on Tokopedia.** Recommended budget pick. Slightly worse sensitivity, reset times 25–30 min. |
+| **GY-LSM6DS3** ✅ chosen | 🟢 (SoftFusion) | ~Rp30.000–50.000 | **Chosen — GY-LSM6DS3 module (LSM6DS3TR-C + e-compass) on Tokopedia.** Supported in firmware as `IMU_LSM6DS3TRC` (SoftFusion, gyro + accel). |
 | ICM-45686 | 🟢 Superior | ~$6.70–8.00 | Best currently available (upgrade path). Used in the official SlimeVR trackers. |
 | LSM6DSV | 🟢 Superior | ~$5.80 | About equal to ICM-45686; a bit more temperature-sensitive. |
+| LSM6DSR | 🟢 Affordable | ~$3.35 | Recommended budget pick (alternative). |
 | BMI160 | 🚫 Avoid | ~$1.50 | Outdated, high drift, ~2/10 DOA. Only a fallback if the old ones are recovered. |
 
-**Chosen: LSM6DSR** — the SlimeVR-recommended budget pick, and cheap on Tokopedia. It's a well-supported SoftFusion IMU (gyro + accel) in the firmware. If you later want the top performance, the upgrade path is the **ICM-45686** ([SlimeVR Mumo Breakout Module](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309), which ships with a published schematic + STEP file for the case).
+**Chosen: GY-LSM6DS3** — a well-supported SoftFusion IMU (the firmware lists `IMU_LSM6DS3TRC` alongside LSM6DSV/LSM6DSO/LSM6DSR/ICM-42688/BMI270). The module also carries an e-compass (magnetometer), but the standard SlimeVR setup runs **6DoF (gyro + accel)**, so the magnetometer is optional. If you later want the top performance, the upgrade path is the **ICM-45686** ([SlimeVR Mumo Breakout Module](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309), which ships with a published schematic + STEP file for the case).
 
-> **LSM6DSR note:** I²C address is **0x69** (SDO/SA0→VCC) or **0x6A** (SDO/SA0→GND) depending on the module's SDO pin — the firmware auto-detects, but confirm the module's SDO connection. Many LSM6DSR breakouts also carry a QMC5883L/QMC6309 magnetometer; the standard SlimeVR setup runs 6DoF (gyro + accel), so the magnetometer is optional.
+> **GY-LSM6DS3 note:** the LSM6DS3TR-C I²C address is **0x69** (SDO/SA0→VCC) or **0x6A** (SDO/SA0→GND) — the firmware auto-detects, but confirm the module's SDO pin. Use `#define IMU IMU_LSM6DS3TRC` in `defines.h`.
 
 ## Buying notes
 

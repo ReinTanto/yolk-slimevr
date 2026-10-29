@@ -21,7 +21,7 @@ This build targets **5 trackers**.
 
 ## Why these parts
 
-- **IMU: LSM6DSR (chosen) / ICM-45686 (upgrade)** — the original GY-BMI160s were misplaced, so the IMU is now a purchase. Per the [SlimeVR IMU comparison](https://docs.slimevr.dev/diy/imu-comparison.html), the **LSM6DSR is the recommended budget pick** (chosen — cheap on Tokopedia); the ICM-45686 is the top-performance upgrade path. The BMI160 is "Avoid" for new builds (outdated, high drift, ~2/10 DOA) — only a fallback if the old ones are recovered. See [02-parts-list.md](02-parts-list.md).
+- **IMU: GY-LSM6DS3 (chosen) / ICM-45686 (upgrade)** — the original GY-BMI160s were misplaced, so the IMU is now a purchase. The **GY-LSM6DS3** (LSM6DS3TR-C, supported in firmware as `IMU_LSM6DS3TRC`, cheap on Tokopedia) is chosen; the ICM-45686 is the top-performance upgrade path. The BMI160 is "Avoid" for new builds (outdated, high drift, ~2/10 DOA) — only a fallback if the old ones are recovered. See [02-parts-list.md](02-parts-list.md).
 - **ESP8266 (Kyware board)** — cheapest WiFi MCU, the board the whole SlimeVR DIY ecosystem is documented around. **Limitation:** firmware ≥ v0.5.3 supports only **one IMU** per ESP8266 (fine — one IMU per tracker).
 - **Pouch LiPo (1S 3.7V)** — 2–3× lighter than an 18650, stable voltage, hot-swappable. Chosen over 18650 for weight on wrists/ankles.
 - **3D-printed case** — designed from scratch around the chosen parts; enables a hot-swap battery bay.

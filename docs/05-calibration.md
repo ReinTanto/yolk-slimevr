@@ -2,9 +2,9 @@
 
 Calibration is done **once per IMU** (values are saved to the MCU flash). Re-run it only if you swap IMUs between trackers or after a firmware change that resets calibration.
 
-## LSM6DSR / ICM-45686 / LSM6DSV (SoftFusion IMUs) — 6-side calibration
+## LSM6DS3 / ICM-45686 / LSM6DSV / LSM6DSR (SoftFusion IMUs) — 6-side calibration
 
-These are the recommended IMUs for this build (LSM6DSR is the chosen one). They use the SoftFusion 6-side calibration:
+These are the recommended IMUs for this build (LSM6DS3 is the chosen one, via the GY-LSM6DS3 module). They use the SoftFusion 6-side calibration:
 
 1. **Warm the tracker to operating temperature** first (wear it a few minutes, ~30–40°C) for the best result.
 2. Power up with the IMU **lying flat on a stable surface** (or press reset).
@@ -12,11 +12,11 @@ These are the recommended IMUs for this build (LSM6DSR is the chosen one). They 
 4. Then place it flat on **each of the other 5 sides**, waiting for the LED/serial prompt before moving to the next.
 5. A **long LED flash** on the last side = calibration complete. The tracker begins showing rotation in the SlimeVR server.
 
-> Some SoftFusion IMUs (e.g. BNO085, ICM-20948) auto-calibrate and can be used after just resting on a flat surface for 20–30 s. The ICM-45686/LSM6DSR benefit from the explicit 6-side routine above.
+> Some SoftFusion IMUs (e.g. BNO085, ICM-20948) auto-calibrate and can be used after just resting on a flat surface for 20–30 s. The ICM-45686/LSM6DS3 benefit from the explicit 6-side routine above.
 
 ## Optional: temperature calibration (reduces drift)
 
-For ICM-45686/LSM6DSR you can optionally run a temperature calibration to cut drift:
+For ICM-45686/LSM6DS3 you can optionally run a temperature calibration to cut drift:
 1. Cool the tracker below ~15°C (fridge).
 2. Power it on and let it warm up gradually — calibration begins automatically when temperature is low.
 
