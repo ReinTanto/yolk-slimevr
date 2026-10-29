@@ -8,8 +8,9 @@ The case is designed from scratch in a CAD package (Fusion 360 / FreeCAD / Solid
 |---|---|
 | Kyware ESP8266 (NodeMCU-style) | ~70 × 35 × 15 (confirm on the board) |
 | GY-BMI160 / Mumo module | Mumo: ~25 × 18 × 3 (1.2 mm PCB, castellated); GY-BMI160: ~20 × 20 × 3 |
-| Pouch cell ZX 523450 | 5 × 34 × 50 |
-| Pouch cell PALO 103450 | 10 × 34 × 50 |
+| Pouch cell 523450 (chosen, 1500 mAh) | 52 × 34 × 5 (L×W×T) |
+| Pouch cell ZX 523450 (alt, 1000 mAh) | 5 × 34 × 50 |
+| Pouch cell PALO 103450 (alt, 2000 mAh) | 10 × 34 × 50 |
 | TP4056 module | ~27 × 17 × 3 |
 | MT3608 module | ~20 × 12 × 5 (with trim pot) |
 | JST-PH 2.0 socket | ~10 × 8 × 8 |
@@ -33,7 +34,7 @@ The case is designed from scratch in a CAD package (Fusion 360 / FreeCAD / Solid
 
 ## Hot-swap battery bay
 
-- **Recessed slot** sized to the pouch cell (ZX 523450: 5×34×50) with a small lip to hold it.
+- **Recessed slot** sized to the pouch cell (523450: 52×34×5 mm) with a small lip to hold it.
 - **JST-PH 2.0 socket** soldered to the board, positioned so the cell's plug mates from the access side.
 - **Retaining clip** (printed catch or a small metal clip) holds the plug.
 - **Alignment guides** (offset pins or a keyed slot) prevent reverse insertion.

@@ -10,8 +10,9 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | 2 | **IMU (chosen)** | LSM6DSR 6-axis breakout, I²C | **LSM6DSR module** (Tokopedia — cheap) | _[drop in the exact Tokopedia listing link]_ | ~$3.35 (Rp~55.000) |
 | 2b | IMU (upgrade) | ICM-45686 + QMC6309 breakout, I²C | **SlimeVR Mumo Breakout Module V1.1** | [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) | ~$8.00 |
 | 2c | IMU (fallback, if GY-BMI160 are found) | GY-BMI160, I²C | GY-BMI160 breakout | (previously owned, misplaced) | — |
-| 3 | **Battery** | Pouch LiPo 1S 3.7V 1000 mAh, **with PCM** | ZX 523450 (5×34×50 mm) | [ZX 523450 1000mAh with PCM](https://www.tokopedia.com/tokojelek01/zx-523450-1000mah-2c-2a-baterai-lipo-3-7v-dengan-pcm-2a-dan-kabel-55mm-503450-5mm-x-34mm-x-50mm-1730800359683425676) | Rp34.500 |
-| 3b | Battery (alt, more runtime) | Pouch LiPo 1S 3.7V 2000 mAh | PALO 103450 (10×34×50 mm) | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
+| 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V **1500 mAh**, 523450 (52×34×5 mm), **with PCM** | 523450 1500 mAh | _[drop in the exact Tokopedia listing link]_ | ~Rp40.000–55.000 |
+| 3b | Battery (alt, 1000 mAh) | Pouch LiPo 1S 3.7V 1000 mAh, 523450, with PCM | ZX 523450 (5×34×50 mm) | [ZX 523450 1000mAh with PCM](https://www.tokopedia.com/tokojelek01/zx-523450-1000mah-2c-2a-baterai-lipo-3-7v-dengan-pcm-2a-dan-kabel-55mm-503450-5mm-x-34mm-x-50mm-1730800359683425676) | Rp34.500 |
+| 3c | Battery (alt, 2000 mAh) | Pouch LiPo 1S 3.7V 2000 mAh, 103450 (10×34×50 mm) | PALO 103450 | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
 | 4 | **Charger** | TP4056, Type-C, with protection | TP4056 Type-C (Mirorim) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
 | 5 | **Step-up** | MT3608, 3.7V→5V, 2A | MT3608 module | [MT3608 (Proton Elcom)](https://www.tokopedia.com/proton-elcom/mt3608-kit-dc-dc-2a-step-up-boost-converter-power-module-mini-5-28v-dc) | ~Rp5.000–8.000 |
 | 5b | Charger+step-up (alt, simpler) | 2-in-1 TP4056 + boost | Kudaponics 2-in-1 | [2-in-1 TP4056 + step-up](https://www.tokopedia.com/kudaponics/a119-j5019-modul-2-in-1-charger-plus-step-up-adjustable-battery-18650-tp4056-bb-74d-micro-usb-type-c-1731729146084230812) | Rp12.900 |
@@ -25,14 +26,14 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 
 | Scenario | Per tracker | 5 trackers |
 |---|---|---|
-| **Chosen (LSM6DSR + ZX 1000mAh + TP4056 + MT3608)** | ~Rp75.000–85.000 | ~Rp375.000–425.000 |
-| Upgrade (ICM-45686 Mumo + ZX 1000mAh + TP4056 + MT3608) | ~Rp110.000–120.000 | ~Rp550.000–600.000 |
+| **Chosen (LSM6DSR + 523450 1500mAh + TP4056 + MT3608)** | ~Rp80.000–95.000 | ~Rp400.000–475.000 |
+| Upgrade (ICM-45686 Mumo + 523450 1500mAh + TP4056 + MT3608) | ~Rp115.000–130.000 | ~Rp575.000–650.000 |
 | With 2-in-1 charger+boost | +Rp5.000–10.000 | +Rp25.000–50.000 |
-| With PALO 2000mAh | +Rp35.000 | +Rp175.000 |
+| With PALO 2000mAh (103450) | +Rp25.000–35.000 | +Rp125.000–175.000 |
 
-(Excludes the MCU, which is owned. IMU is a purchase — see the recommendation above.)
+(Excludes the MCU, which is owned. IMU + battery are purchases — see the recommendations above.)
 
-Approximate USD conversion: 1 USD ≈ Rp16.000. LSM6DSR ≈ $3.35, ICM-45686 Mumo ≈ $8.
+Approximate USD conversion: 1 USD ≈ Rp16.000. LSM6DSR ≈ $3.35, 523450 1500mAh ≈ $3–4, ICM-45686 Mumo ≈ $8.
 
 ## IMU recommendation
 
