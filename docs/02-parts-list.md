@@ -21,7 +21,7 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | 8 | **Wiring** | 22–26 AWG hook-up wire | assorted | search Tokopedia: "kabel jumper" / "kabel hook up" | ~Rp5.000 (roll) |
 | 9 | **Strap** | Elastic or leather, ~25 mm wide | elastic band | search Tokopedia: "tali elastis" / "strap" | ~Rp5.000–10.000 |
 | 10 | **Misc** | Heat shrink, kapton tape, solder, M2.5 screws | assorted | search Tokopedia: "heat shrink tube", "timah solder" | ~Rp10.000 |
-| 11 | **Charging dock** (one-time, for the removable cells) | 5-slot TP4056 bank + JST-PH + 5V 5–10A supply + printed cradles | see [10-charging-dock.md](10-charging-dock.md) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) + search "konektor JST PH 2.0" + "adaptor usb 5v 5a" | ~Rp50.000–100.000 |
+| 11 | **Charging dock** (one-time, for the removable cells) | 5-slot TP4056 bank + JST-PH (or pogo pins) + 5V 5–10A supply + printed cradles | see [10-charging-dock.md](10-charging-dock.md) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) + search "konektor JST PH 2.0" + "adaptor usb 5v 5a" (+ optional "magnetic pogo pin 2 pin") | JST-PH: ~Rp50.000–100.000; pogo: +Rp1.000.000–1.200.000 (5-slot) or +Rp200.000–240.000 (single) |
 
 ## Cost estimate
 

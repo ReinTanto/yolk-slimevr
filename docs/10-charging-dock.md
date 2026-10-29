@@ -59,6 +59,40 @@ Print a **5-slot bank**: five TP4056 modules, each with a JST-PH socket and a ce
 - **Remove a cell that gets hot** during charging immediately.
 - The TP4056's over-current protection cuts the cell at ~3A; the cell's PCM (if present) adds a second layer.
 
+## Magnetic pogo-pin option (cleaner hot-swap)
+
+For a tool-free, satisfying "drop and charge" experience, use **magnetic pogo pins** on the dock instead of (or in addition to) JST-PH. The pogo pins go **only on the dock** — the tracker keeps its cheap JST-PH hot-swap.
+
+### How it works
+
+- **Cell side:** two **copper contact pads** (or a 2-pin pogo female) on the cell cradle, wired to the TP4056 `B+/B−`.
+- **Dock side:** two **spring-loaded pogo pins** (male) on the dock, magnetically aligned to the cell's pads. Drop the cell in → magnets pull it into contact → it charges.
+- **Magnets** (small neodymium) provide alignment/retention; the pogo pins do the electrical contact.
+
+### Cost
+
+| Setup | Pogo pins | ~Price |
+|---|---|---|
+| Single-slot dock | 1× 2-pin pogo pair | Rp200.000–240.000 |
+| 5-slot dock | 5× 2-pin pogo pairs | Rp1.000.000–1.200.000 |
+| + neodymium magnets | 2 per slot | Rp10.000–20.000 per slot |
+
+Retail pogo pin pairs (AliExpress/eBay/Tokopedia) run ~$12–15/pair. Bulk (Alibaba, MOQ 1,000+) is $1–6/pair — not realistic for 5 slots.
+
+### Recommendation
+
+**Start with a single-slot pogo dock** (one pogo pair, ~Rp200.000–240.000) to validate the design. If you love it, scale to the 5-slot bank. Or **keep the JST-PH dock** (Rp50.000–100.000) as the workhorse and add **one pogo slot** as the "premium" charging spot.
+
+### Pogo pin parts
+
+| Part | Notes | ~Price |
+|---|---|---|
+| 2-pin magnetic pogo pin pair (male + female, 2.54 mm pitch, 2A) | search "magnetic pogo pin connector 2 pin" (AliExpress/eBay/Tokopedia) | Rp200.000–240.000 per pair |
+| Neodymium magnets (5×5×2 mm) | alignment/retention | Rp5.000–10.000 each |
+| Copper contact pads / PCB pads | cell-side contact | Rp2.000–5.000 |
+
+> **Polarity:** use a **2-pin** pogo pair (V+ and GND). The TP4056's over-current protection + the cell's PCM handle reverse-polarity protection, but **key the pads** (offset or shaped) so the cell can't be inserted reversed.
+
 ## Parts (Tokopedia)
 
 | Part | Link | ~Price |
@@ -66,5 +100,7 @@ Print a **5-slot bank**: five TP4056 modules, each with a JST-PH socket and a ce
 | TP4056 Type-C (with protection) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
 | JST-PH 2.0 2-pin socket | search Tokopedia: "konektor JST PH 2.0 2 pin" | Rp2.000–5.000 |
 | 5V USB supply (5–10A) | search Tokopedia: "adaptor usb 5v 5a" / "charger usb c pd 65w" | Rp20.000–60.000 |
+| 2-pin magnetic pogo pin pair (optional) | search "magnetic pogo pin connector 2 pin" | Rp200.000–240.000 |
+| Neodymium magnets (optional) | search "magnet neodymium 5x5x2" | Rp5.000–10.000 each |
 
-> A 5-slot dock ≈ 5× TP4056 + 5× JST-PH + 1× 5V supply + printed cradles ≈ **Rp50.000–100.000** one-time, then it recharges every cell forever.
+> A 5-slot JST-PH dock ≈ 5× TP4056 + 5× JST-PH + 1× 5V supply + printed cradles ≈ **Rp50.000–100.000** one-time. A 5-slot pogo-pin dock adds **Rp1.000.000–1.200.000** for the pogo pairs + magnets. A single-slot pogo dock adds **Rp200.000–240.000**.

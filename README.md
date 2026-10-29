@@ -29,7 +29,7 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 | Charger | TP4056 module (Type-C, with protection) |
 | Step-up | MT3608 module (3.7V → 5V) |
 | Case | 3D-printed (designed around the parts) |
-| Charging dock | 3D-printed 5-slot TP4056 bank (recharges the removable cells) |
+| Charging dock | 3D-printed 5-slot TP4056 bank (recharges the removable cells) — *optional: magnetic pogo pins* |
 
 > The original GY-BMI160s were misplaced, so the IMU is now a purchase. The **GY-LSM6DS3** (LSM6DS3TR-C, supported in firmware as `IMU_LSM6DS3TRC`, cheap on Tokopedia) is chosen; the ICM-45686 is the upgrade path. See [docs/02-parts-list.md](docs/02-parts-list.md).
 
