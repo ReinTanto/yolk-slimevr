@@ -26,8 +26,7 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 | MCU | Kyware ESP8266 (NodeMCU-style, CH340, micro USB + Type-C) |
 | IMU | **GY-LSM6DS3** (LSM6DS3TR-C 6DoF + e-compass, I²C — Tokopedia) — *upgrade: ICM-45686 Mumo* |
 | Battery | Pouch LiPo 1S 3.7V **1000 mAh** (523450, 52×34 mm, hot-swappable, JST-PH) |
-| Charger | TP4056 module (Type-C, with protection) |
-| Step-up | MT3608 module (3.7V → 5V) |
+| Charger + step-up | TP4056 + MT3608 combined board (Supreme ID, micro USB, with protection) |
 | Case | 3D-printed (designed around the parts) |
 | Battery module | 3D-printed strap-held cradle (holds the removable cell; strap retains it) |
 

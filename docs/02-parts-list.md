@@ -13,9 +13,10 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V **1000 mAh**, 523450 (52×34×5 mm) | 523450 1000 mAh (a16com, Tokopedia) | [523450 1000mAh 52×34mm](https://www.tokopedia.com/a16com/baterai-lithium-polimer-1000mah-523450-52x34mm) | ~Rp30.000–40.000 |
 | 3b | Battery (alt, 1500 mAh) | Pouch LiPo 1S 3.7V 1500 mAh, 523450 (52×34×5 mm) | 523450 1500 mAh | (higher-capacity 523450 variant) | ~Rp40.000–55.000 |
 | 3c | Battery (alt, 2000 mAh) | Pouch LiPo 1S 3.7V 2000 mAh, 103450 (10×34×50 mm) | PALO 103450 | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
-| 4 | **Charger** | TP4056, Type-C, with protection | TP4056 Type-C (Mirorim) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
-| 5 | **Step-up** | MT3608, 3.7V→5V, 2A | MT3608 module | [MT3608 (Proton Elcom)](https://www.tokopedia.com/proton-elcom/mt3608-kit-dc-dc-2a-step-up-boost-converter-power-module-mini-5-28v-dc) | ~Rp5.000–8.000 |
-| 5b | Charger+step-up (alt, simpler) | 2-in-1 TP4056 + boost | Kudaponics 2-in-1 | [2-in-1 TP4056 + step-up](https://www.tokopedia.com/kudaponics/a119-j5019-modul-2-in-1-charger-plus-step-up-adjustable-battery-18650-tp4056-bb-74d-micro-usb-type-c-1731729146084230812) | Rp12.900 |
+| 4 | **Charger + step-up (chosen)** | TP4056 + MT3608 combined, micro USB, with protection | **TP4056 MT3608 BMS Charger** (Supreme ID) | [TP4056 MT3608 BMS Charger (Supreme ID)](https://www.tokopedia.com/supreme/tp4056-mt3608-li-ion-lipo-bms-charger-dc-dc-boost-converter-micro-usb-power-supply-battery-management-system-1731300325103011443) | Rp9.900 |
+| 4b | Charger (alt, separate) | TP4056, Type-C, with protection | TP4056 Type-C (Mirorim) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
+| 4c | Step-up (alt, separate) | MT3608, 3.7V→5V, 2A | MT3608 module | [MT3608 (Proton Elcom)](https://www.tokopedia.com/proton-elcom/mt3608-kit-dc-dc-2a-step-up-boost-converter-power-module-mini-5-28v-dc) | ~Rp5.000–8.000 |
+| 4d | Charger+step-up (alt) | 2-in-1 TP4056 + boost, Type-C | Kudaponics 2-in-1 | [2-in-1 TP4056 + step-up](https://www.tokopedia.com/kudaponics/a119-j5019-modul-2-in-1-charger-plus-step-up-adjustable-battery-18650-tp4056-bb-74d-micro-usb-type-c-1731729146084230812) | Rp12.900 |
 | 6 | **Battery connector** (hot-swap) | JST-PH 2.0 2-pin socket + plug | JST-PH 2.0 connector pair | search Tokopedia: "konektor JST PH 2.0 2 pin" | ~Rp2.000–5.000 |
 | 7 | **Power switch** | Slide switch SPST 6×3×12 mm | slide switch | search Tokopedia: "saklar slide spst" | ~Rp1.000–3.000 |
 | 8 | **Wiring** | 22–26 AWG hook-up wire | assorted | search Tokopedia: "kabel jumper" / "kabel hook up" | ~Rp5.000 (roll) |
@@ -27,9 +28,9 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 
 | Scenario | Per tracker | 5 trackers |
 |---|---|---|
-| **Chosen (GY-LSM6DS3 + 523450 1000mAh + TP4056 + MT3608)** | ~Rp70.000–90.000 | ~Rp350.000–450.000 |
-| Upgrade (ICM-45686 Mumo + 523450 1000mAh + TP4056 + MT3608) | ~Rp110.000–130.000 | ~Rp550.000–650.000 |
-| With 2-in-1 charger+boost | +Rp5.000–10.000 | +Rp25.000–50.000 |
+| **Chosen (GY-LSM6DS3 + 523450 1000mAh + TP4056/MT3608 combined)** | ~Rp75.000–95.000 | ~Rp375.000–475.000 |
+| Upgrade (ICM-45686 Mumo + 523450 1000mAh + TP4056/MT3608 combined) | ~Rp115.000–135.000 | ~Rp575.000–675.000 |
+| With separate TP4056 + MT3608 (instead of combined) | −Rp3.000–5.000 | −Rp15.000–25.000 |
 | With 523450 1500mAh | +Rp10.000–20.000 | +Rp50.000–100.000 |
 | With PALO 2000mAh (103450) | +Rp30.000–40.000 | +Rp150.000–200.000 |
 
