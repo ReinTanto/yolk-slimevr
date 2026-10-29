@@ -6,7 +6,7 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 
 | # | Part | Spec | Pick | Link | ~Price |
 |---|---|---|---|---|---|
-| 1 | **MCU** | ESP8266, CH340, micro USB + Type-C | Kyware ESP8266 NodeMCU-style | [Kyware ESP8266 board](https://www.tokopedia.com/kyware/kyware-esp8266-micro-usb-type-c-nodemcu-lua-ch340-v3-wifi-iot-esp-8266-develompent-board-esp-12-1730054147268510742) | — (owned) |
+| 1 | **MCU** | ESP8266, micro USB, 34.2×25.6 mm (compact) | **Wemos D1 Mini** (Supreme) | [Wemos D1 Mini (Supreme)](https://www.tokopedia.com/supreme/wemos-d1-mini-esp8266-arduino-alternatif) | ~Rp15.000–25.000 |
 | 2 | **IMU (chosen)** | GY-LSM6DS3 6DoF module (LSM6DS3TR-C + e-compass), I²C | **GY-LSM6DS3** (Supreme, Tokopedia) | [GY-LSM6DS3 6DoF module](https://www.tokopedia.com/supreme/gy-lsm6ds3-6dof-6-axis-always-on-e-compass-accelerometer-gyroscope) | ~Rp30.000–50.000 |
 | 2b | IMU (upgrade) | ICM-45686 + QMC6309 breakout, I²C | **SlimeVR Mumo Breakout Module V1.1** | [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) | ~$8.00 |
 | 2c | IMU (fallback, if GY-BMI160 are found) | GY-BMI160, I²C | GY-BMI160 breakout | (previously owned, misplaced) | — |
@@ -28,7 +28,7 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 
 | Scenario | Per tracker | 5 trackers |
 |---|---|---|
-| **Chosen (GY-LSM6DS3 + 523450 1000mAh + TP4056/MT3608 combined)** | ~Rp75.000–95.000 | ~Rp375.000–475.000 |
+| **Chosen (D1 Mini + GY-LSM6DS3 + 523450 1000mAh + TP4056/MT3608 combined)** | ~Rp90.000–130.000 | ~Rp450.000–650.000 |
 | Upgrade (ICM-45686 Mumo + 523450 1000mAh + TP4056/MT3608 combined) | ~Rp115.000–135.000 | ~Rp575.000–675.000 |
 | With separate TP4056 + MT3608 (instead of combined) | −Rp3.000–5.000 | −Rp15.000–25.000 |
 | With 523450 1500mAh | +Rp10.000–20.000 | +Rp50.000–100.000 |
