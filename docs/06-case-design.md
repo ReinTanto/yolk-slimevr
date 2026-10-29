@@ -2,6 +2,8 @@
 
 The case is designed from scratch in a CAD package (Fusion 360 / FreeCAD / SolidWorks) around the chosen parts. One design per tracker type (chest vs. wrist/ankle can differ in strap + size).
 
+> **Visuals:** see the Draw.io layout diagrams — [`diagrams/tracker-layout.drawio`](../diagrams/tracker-layout.drawio) (top-down component placement) and [`diagrams/case-layout.drawio`](../diagrams/case-layout.drawio) (elongated case, top-down + side view). Open in [draw.io](https://app.diagrams.net) or the VS Code Draw.io Integration extension.
+
 ## Key part dimensions to design around
 
 | Part | Dimensions (mm) |
