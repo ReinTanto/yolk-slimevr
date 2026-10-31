@@ -44,22 +44,26 @@ Key settings for this build:
 
 ## 3. Build & flash (PlatformIO)
 
+The default env is already `BOARD_WEMOSD1MINI` — no `platformio.ini` changes needed.
+
 ```bash
-pio run            # build
-pio run -t upload  # flash (board selected as d1_mini / nodemcuv2 in platformio.ini)
+python -m platformio run -e BOARD_WEMOSD1MINI -t upload --upload-port COMx
 ```
 
-`platformio.ini` board for this build:
+**Critical: set the IMU explicitly in `board-defaults.json`** (the preprocessor injects `SENSOR_DESC_LIST` from there, overriding `defines.h`):
 
-```ini
-[env:d1_mini]
-platform = espressif8266
-board = d1_mini        ; or nodemcuv2, matching the Kyware ESP-12 board
+```json
+"BOARD_WEMOSD1MINI": { "values": { "SENSORS": [
+  { "protocol": "I2C", "imu": "IMU_LSM6DS3TRC", "address": 106, "int": "D5",
+    "rotation": "DEG_270", "scl": "D1", "sda": "D2" }
+] } }
 ```
 
-### Alternative: web flasher
+> **Gotcha (found the hard way):** the current `main` firmware has `SoftFusionLSM6DS3TRC` **commented out of the auto-detect list** (`src/sensors/SensorBuilder.h`), so `IMU_AUTO` can never find the GY-LSM6DS3 — the tracker boots with `0 sensor(s) configured`, never appears in the server, and the LED shows the IMU-error blink. Always flash with the explicit `IMU_LSM6DS3TRC` + `"address": 106` (= 0x6A, SDO→GND; JSON numbers are decimal — 0x6A is 106, not 90).
+>
+> **Do not use the app's web flasher for this build** — it builds from `main` with `IMU_AUTO` defaults and will produce the broken 0-sensor firmware. Use the PlatformIO build above (or the web flasher only if it lets you set the IMU explicitly).
 
-Use a web flasher (e.g. the DIY Firmware Tool in the SlimeVR app Settings tab, or https://slimevr.shinebright.dev) to build + flash in the browser — no local toolchain needed.
+Verify after flashing (serial @ 115200): the boot log must show `Sensor 0 configured` and `1 sensor(s) configured`. If it shows `0 sensor(s) configured`, the IMU setting didn't take.
 
 ## 4. After flashing
 
