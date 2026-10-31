@@ -4,6 +4,8 @@ DIY SlimeVR full-body tracking (FBT) build using **GY-LSM6DS3** IMUs, **ESP8266*
 
 This repo documents the complete plan, parts list (with purchase links), wiring, firmware, calibration, and case design for a 5-tracker SlimeVR setup.
 
+> **Working on a tracker? Start with [FLASH_AND_USE.md](FLASH_AND_USE.md)** — the end-to-end agent guide: flashing firmware (incl. the `IMU_AUTO` gotcha), diagnosing the failure modes found in the first build, and using the tracker after flashing.
+
 ## Contents
 
 | Document | What it covers |
@@ -12,7 +14,7 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 | [docs/02-parts-list.md](docs/02-parts-list.md) | Full BOM with Tokopedia product links |
 | [docs/03-wiring.md](docs/03-wiring.md) | Pinout, wiring diagram, power chain |
 | [docs/04-firmware.md](docs/04-firmware.md) | Flashing SlimeVR firmware, `defines.h` config |
-| [docs/05-calibration.md](docs/05-calibration.md) | BMI160 6-side calibration + temperature calibration |
+| [docs/05-calibration.md](docs/05-calibration.md) | 6-side calibration (LSM6DS3/SoftFusion) + temperature calibration |
 | [docs/06-case-design.md](docs/06-case-design.md) | 3D case design, dimensions, hot-swap battery |
 | [docs/07-assembly.md](docs/07-assembly.md) | Step-by-step build guide |
 | [docs/08-server-setup.md](docs/08-server-setup.md) | SlimeVR server + SteamVR OpenVR driver |
