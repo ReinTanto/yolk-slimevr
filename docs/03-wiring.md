@@ -40,16 +40,15 @@ MT3608 (GND)   ──────────────→ ESP8266 GND
 Slide switch: in series with LiPo (+) or MT3608 VOUT+
 ```
 
-## I²C — GY-BMI160 → ESP8266
+## I²C — GY-LSM6DS3 → ESP8266
 
-| GY-BMI160 | ESP8266 (NodeMCU / D1-Mini-style) |
+| GY-LSM6DS3 | ESP8266 (NodeMCU / D1-Mini-style) |
 |---|---|
-| VCC (3.3V) | 3V3 |
+| VCC | 3V3 |
 | GND | GND |
 | SDA | D2 (GPIO4) |
 | SCL | D1 (GPIO5) |
-| SDO | GND → I²C address **0x68** |
-| CSB | GND |
+| SDO/SA0 | GND → I²C address **0x6A** (or VCC → **0x69**) |
 
 > The Kyware board is NodeMCU-style, so it uses the same **D0–D8** pin labels as a D1 Mini. **Confirm the silkscreen on your exact board** and map to the real GPIOs. If your board labels differ, set the actual GPIO numbers in `defines.h` (see [04-firmware.md](04-firmware.md)).
 > A single IMU usually works without external I²C pull-ups. If you add more I²C devices later, add 4.7kΩ pull-ups on SDA and SCL.

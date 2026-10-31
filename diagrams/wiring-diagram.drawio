@@ -10,7 +10,7 @@
         <mxCell id="title" value="yolk-slimevr — Per-Tracker Wiring Diagram" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="280" y="20" width="600" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Kyware ESP8266 + ICM-45686 (Mumo) / GY-BMI160 + Pouch LiPo (hot-swap)" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#666666" vertex="1" parent="1">
+        <mxCell id="subtitle" value="Kyware ESP8266 + GY-LSM6DS3 (LSM6DS3TR-C + e-compass) + Pouch LiPo (hot-swap)" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#666666" vertex="1" parent="1">
           <mxGeometry x="280" y="50" width="600" height="20" as="geometry" />
         </mxCell>
 
@@ -179,14 +179,11 @@
         <mxCell id="legend3" value="• GY-LSM6DS3: I²C addr 0x69 (SDO→VCC) or 0x6A (SDO→GND)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
           <mxGeometry x="95" y="434" width="360" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="legend4" value="• GY-BMI160: SDO→GND (addr 0x68), CSB→GND" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+        <mxCell id="legend5" value="• MT3608 trim pot set to 5.0 V (measure under load)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
           <mxGeometry x="95" y="456" width="360" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="legend5" value="• MT3608 trim pot set to 5.0 V (measure under load)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="95" y="478" width="360" height="20" as="geometry" />
-        </mxCell>
         <mxCell id="legend6" value="• Do NOT power ESP8266 directly from 3.7 V cell" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#b85450" vertex="1" parent="1">
-          <mxGeometry x="95" y="500" width="360" height="20" as="geometry" />
+          <mxGeometry x="95" y="478" width="360" height="20" as="geometry" />
         </mxCell>
 
       </root>
