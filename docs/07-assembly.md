@@ -56,6 +56,8 @@ Build the power chain first, verify it, then add the IMU.
 
 ## Phase 3 — Solder the IMU (GY-LSM6DS3) on the backside
 
+> **Reference:** see [`media/imu-soldered.jpg`](../media/imu-soldered.jpg) — the GY-LSM6DS3 soldered to the backside of the D1 Mini with copper enamel wire.
+
 5. **Solder the GY-LSM6DS3** to the backside of the D1 Mini using **copper enamel wire**:
 
 | GY-LSM6DS3 | D1 Mini (backside) |
@@ -85,7 +87,9 @@ Build the power chain first, verify it, then add the IMU.
 
 ## Phase 5 — Smoke test (on battery power)
 
-11. **Turn on the slide switch** (battery power).
+> **Reference:** see [`media/build-demo.mp4`](../media/build-demo.mp4) — the full soldered unit (no case) demonstrated with SlimeVR running on the PC in the background.
+
+11. **Turn on the toggle switch** (battery power).
 12. **Verify the tracker boots and connects:**
     - The D1 Mini's LED should blink (WiFi connection).
     - The tracker should appear in the SlimeVR server (see [08-server-setup.md](08-server-setup.md)).

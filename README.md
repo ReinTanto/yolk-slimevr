@@ -39,6 +39,11 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 - **5 trackers** for full-body tracking (chest, 2 wrists, 2 ankles)
 - **1 tracker** for chest-only
 
+## Media
+
+- **IMU soldered:** [`media/imu-soldered.jpg`](media/imu-soldered.jpg) — GY-LSM6DS3 soldered to the backside of the D1 Mini with copper enamel wire.
+- **Build demo:** [`media/build-demo.mp4`](media/build-demo.mp4) — full soldered unit (no case) demonstrated with SlimeVR running on the PC.
+
 ## Status
 
-Planning / parts procurement. See [docs/02-parts-list.md](docs/02-parts-list.md) for purchase links.
+Build in progress. See [docs/02-parts-list.md](docs/02-parts-list.md) for purchase links and [docs/07-assembly.md](docs/07-assembly.md) for the assembly guide.
