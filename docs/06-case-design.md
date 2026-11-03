@@ -8,16 +8,16 @@ The case is designed from scratch in a CAD package (Fusion 360 / FreeCAD / Solid
 
 | Part | Dimensions (mm) |
 |---|---|
-| Kyware ESP8266 (NodeMCU-style) | ~70 × 35 × 15 (confirm on the board) |
-| GY-BMI160 / Mumo module | Mumo: ~25 × 18 × 3 (1.2 mm PCB, castellated); GY-BMI160: ~20 × 20 × 3 |
+| Wemos D1 Mini (ESP8266) | 34.2 × 25.6 × ~3 |
+| D1 Mini battery shield | Same W×L as D1 Mini (34.2 × 25.6), thick (~8–10 mm with the 5 mm coil) |
+| GY-LSM6DS3 | ~20 × 20 × 3 (soldered on the backside of the D1 Mini) |
 | Pouch cell 523450 (chosen, 1000 mAh) | 52 × 34 × 5 (L×W×T) |
 | Pouch cell 523450 (alt, 1500 mAh) | 52 × 34 × 5 (L×W×T) |
 | Pouch cell PALO 103450 (alt, 2000 mAh) | 10 × 34 × 50 |
-| TP4056 module | ~27 × 17 × 3 |
-| MT3608 module | ~20 × 12 × 5 (with trim pot) |
-| JST-PH 2.0 socket | ~10 × 8 × 8 |
-| Slide switch (SPST) | 6 × 3 × 12 |
-| USB Type-C port | ~9 × 7 (through-hole) |
+| TP4056/MT3608 charger (on top) | ~27 × 17 × 5 (soldered via pins to the D1 Mini top) |
+| JST-PH 2.0 socket (on the shield) | ~10 × 8 × 8 |
+| Toggle switch (SPST) | ~10 × 5 × 15 |
+| USB micro port (on the shield) | ~8 × 7 (through-hole) |
 
 ## Required features
 

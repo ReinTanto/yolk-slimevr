@@ -13,16 +13,22 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V **1000 mAh**, 523450 (52×34×5 mm) | 523450 1000 mAh (a16com, Tokopedia) | [523450 1000mAh 52×34mm](https://www.tokopedia.com/a16com/baterai-lithium-polimer-1000mah-523450-52x34mm) | ~Rp30.000–40.000 |
 | 3b | Battery (alt, 1500 mAh) | Pouch LiPo 1S 3.7V 1500 mAh, 523450 (52×34×5 mm) | 523450 1500 mAh | (higher-capacity 523450 variant) | ~Rp40.000–55.000 |
 | 3c | Battery (alt, 2000 mAh) | Pouch LiPo 1S 3.7V 2000 mAh, 103450 (10×34×50 mm) | PALO 103450 | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
-| 4 | **Charger + step-up (chosen)** | TP4056 + MT3608 combined, micro USB, with protection | **TP4056 MT3608 BMS Charger** (Supreme ID) | [TP4056 MT3608 BMS Charger (Supreme ID)](https://www.tokopedia.com/supreme/tp4056-mt3608-li-ion-lipo-bms-charger-dc-dc-boost-converter-micro-usb-power-supply-battery-management-system-1731300325103011443) | Rp9.900 |
-| 4b | Charger (alt, separate) | TP4056, Type-C, with protection | TP4056 Type-C (Mirorim) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
-| 4c | Step-up (alt, separate) | MT3608, 3.7V→5V, 2A | MT3608 module | [MT3608 (Proton Elcom)](https://www.tokopedia.com/proton-elcom/mt3608-kit-dc-dc-2a-step-up-boost-converter-power-module-mini-5-28v-dc) | ~Rp5.000–8.000 |
-| 4d | Charger+step-up (alt) | 2-in-1 TP4056 + boost, Type-C | Kudaponics 2-in-1 | [2-in-1 TP4056 + step-up](https://www.tokopedia.com/kudaponics/a119-j5019-modul-2-in-1-charger-plus-step-up-adjustable-battery-18650-tp4056-bb-74d-micro-usb-type-c-1731729146084230812) | Rp12.900 |
-| 6 | **Battery connector** (hot-swap) | JST-PH 2.0 2-pin socket + plug | JST-PH 2.0 connector pair | search Tokopedia: "konektor JST PH 2.0 2 pin" | ~Rp2.000–5.000 |
-| 7 | **Power switch** | Slide switch SPST 6×3×12 mm | slide switch | search Tokopedia: "saklar slide spst" | ~Rp1.000–3.000 |
+| 4 | **Battery shield (chosen)** | D1 Mini battery shield, same W×L as D1 Mini, thick (5 mm coil), with battery connector | **Wemos D1 Mini battery shield** | search Tokopedia: "wemos d1 mini battery shield" / "d1 mini shield" | ~Rp15.000–30.000 |
+| 4b | Charger (on the shield) | TP4056 + step-up, soldered via pins to the top of the D1 Mini | TP4056 / TP4056+MT3608 module | [TP4056 MT3608 BMS Charger (Supreme ID)](https://www.tokopedia.com/supreme/tp4056-mt3608-li-ion-lipo-bms-charger-dc-dc-boost-converter-micro-usb-power-supply-battery-management-system-1731300325103011443) | Rp9.900 |
+| 4c | Charger (alt, separate) | TP4056, Type-C, with protection | TP4056 Type-C (Mirorim) | [TP4056 Type-C (Mirorim)](https://www.tokopedia.com/mirorim/tp4056-type-c-18650-battery-charging-module-lithium-ion-protection) | Rp5.000 |
+| 4d | Step-up (alt, separate) | MT3608, 3.7V→5V, 2A | MT3608 module | [MT3608 (Proton Elcom)](https://www.tokopedia.com/proton-elcom/mt3608-kit-dc-dc-2a-step-up-boost-converter-power-module-mini-5-28v-dc) | ~Rp5.000–8.000 |
+| 6 | **Battery connector** (on the shield) | JST-PH 2.0 2-pin (comes with the shield) | (included with the shield) | — | — |
+| 7 | **Power switch** | **Toggle switch** (SPST), in series with GND | toggle switch | search Tokopedia: "saklar toggle spst" | Rp1.000–3.000 |
 | 8 | **Wiring** | 22–26 AWG hook-up wire | assorted | search Tokopedia: "kabel jumper" / "kabel hook up" | ~Rp5.000 (roll) |
 | 9 | **Strap** | Elastic or leather, ~25 mm wide | elastic band | search Tokopedia: "tali elastis" / "strap" | ~Rp5.000–10.000 |
 | 10 | **Misc** | Heat shrink, kapton tape, solder, M2.5 screws | assorted | search Tokopedia: "heat shrink tube", "timah solder" | ~Rp10.000 |
 | 11 | **Battery module** (strap-held, per tracker) | 3D-printed cradle + JST-PH + release tab; sits under the strap | see [10-battery-module.md](10-battery-module.md) | search "konektor JST PH 2.0" + (print cost) | ~Rp2.000–5.000 + print |
+
+## Design change log
+
+| Date | Change | Reason |
+|---|---|---|
+| 2026-11-03 | **Replaced the TP4056/MT3608 combined board with a D1 Mini battery shield** | The original combined board (Supreme ID) had issues (unreliable) and was slightly larger than the D1 Mini. The battery shield is the same W×L as the D1 Mini, but thicker (a 5 mm tall coil on the board). The shield comes with a battery connector (JST-PH). Attempted to desolder the connector to save space, but it only saves 1 mm because of the 5 mm coil. The charger (TP4056/MT3608) is now soldered via pins to the top of the D1 Mini. The IMU (GY-LSM6DS3) is soldered with copper enamel wire and hot-glued to the backside of the D1 Mini. A **toggle switch** (SPST) is in series with GND. |
 
 ## Cost estimate
 

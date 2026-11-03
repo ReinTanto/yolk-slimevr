@@ -4,41 +4,33 @@
 
 ## Power chain (per tracker)
 
-**Chosen: TP4056 + MT3608 combined board (Supreme ID, Rp9.900, micro USB)**
+**Chosen: D1 Mini battery shield + TP4056/MT3608 charger (soldered on top) + toggle switch**
 
 ```
-Pouch LiPo (+) ──────────────→ board B+
-Pouch LiPo (−) ──────────────→ board B−
-USB micro (VCC) ─────────────→ board VIN
-USB micro (GND) ─────────────→ board GND
+Pouch LiPo (+) ──────────────→ battery shield B+
+Pouch LiPo (−) ──────────────→ battery shield B−
+USB micro (VCC) ─────────────→ battery shield VIN
+USB micro (GND) ─────────────→ battery shield GND
 
-Board VOUT+ ─────────────────→ ESP8266 5V pin
-Board GND   ─────────────────→ ESP8266 GND
+Battery shield 5V ────────────→ D1 Mini 5V pin
+Battery shield GND ──[toggle switch]──→ D1 Mini GND
 
-Slide switch: in series with LiPo (+) or board VOUT+
+Charger (TP4056/MT3608) ──[pins]──→ D1 Mini top pads (5V, GND, VIN)
+IMU (GY-LSM6DS3) ──[copper enamel wire]──→ D1 Mini backside (3V3, GND, SDA, SCL)
 ```
 
-The combined board handles charging (TP4056) and step-up (MT3608) on one PCB. No separate TP4056 → MT3608 jump wires.
+The **battery shield** is the same W×L as the D1 Mini but thicker (a 5 mm tall coil on the board). It comes with a battery connector (JST-PH). The **charger** (TP4056/MT3608) is soldered via pins to the top of the D1 Mini. The **IMU** (GY-LSM6DS3) is soldered with copper enamel wire and hot-glued to the backside of the D1 Mini. A **toggle switch** (SPST) is in series with GND.
 
-> **Do not** power the ESP8266 directly from the 3.7V cell — it needs 5V. The MT3608 step-up (built into the combined board) is mandatory.
-> **Set the output to 5.0V** (measure with a multimeter) before connecting the load. If the board has a trim pot, adjust it; if it's fixed 5V, verify with a multimeter.
+> **Do not** power the D1 Mini directly from the 3.7V cell — it needs 5V. The step-up (on the charger) is mandatory.
+> **Set the output to 5.0V** (measure with a multimeter) before connecting the load.
 
-### Alternative: separate TP4056 + MT3608
+### Why the battery shield (design change)
 
-```
-Pouch LiPo (+) ──────────────→ TP4056 (B+)
-Pouch LiPo (−) ──────────────→ TP4056 (B−)
-USB Type-C (VCC) ────────────→ TP4056 (VIN)
-USB Type-C (GND) ────────────→ TP4056 (GND)
+The original TP4056/MT3608 combined board (Supreme ID) was replaced because:
+1. **It had issues** (unreliable).
+2. **It was slightly larger** than the D1 Mini.
 
-TP4056 (BAT+) ───────────────→ MT3608 (VIN+)
-TP4056 (BAT−) ───────────────→ MT3608 (VIN−)
-
-MT3608 (VOUT+) ──────────────→ ESP8266 5V pin
-MT3608 (GND)   ──────────────→ ESP8266 GND
-
-Slide switch: in series with LiPo (+) or MT3608 VOUT+
-```
+The battery shield is the same W×L as the D1 Mini, but thicker (5 mm coil). The charger is now a separate module soldered on top. See the [design change log](02-parts-list.md#design-change-log) for details.
 
 ## I²C — GY-LSM6DS3 → ESP8266
 
@@ -60,21 +52,23 @@ Slide switch: in series with LiPo (+) or MT3608 VOUT+
 - Swapping = unplug the dead cell's connector, plug in a charged one. The MT3608 doesn't care which cell is connected — it boosts whatever 3.7V it gets.
 - Add a **retaining clip** in the case so the connector doesn't vibrate loose, and **alignment guides** so it can't be inserted reversed.
 
-## Full netlist (per tracker) — combined board
+## Full netlist (per tracker) — battery shield build
 
 | From | To |
 |---|---|
-| LiPo + (via JST-PH) | board B+ |
-| LiPo − (via JST-PH) | board B− |
-| USB micro VCC | board VIN |
-| USB micro GND | board GND |
-| board VOUT+ | ESP8266 5V |
-| board GND | ESP8266 GND |
-| ESP8266 3V3 | GY-LSM6DS3 VCC |
-| ESP8266 GND | GY-LSM6DS3 GND |
-| ESP8266 D2 (GPIO4) | GY-LSM6DS3 SDA |
-| ESP8266 D1 (GPIO5) | GY-LSM6DS3 SCL |
-| Slide switch | in series with LiPo + or board VOUT+ |
+| LiPo + (via JST-PH on the shield) | battery shield B+ |
+| LiPo − (via JST-PH on the shield) | battery shield B− |
+| USB micro VCC | battery shield VIN |
+| USB micro GND | battery shield GND |
+| battery shield 5V | D1 Mini 5V pin |
+| battery shield GND → [toggle switch] | D1 Mini GND |
+| charger (TP4056/MT3608) 5V [via pins] | D1 Mini 5V pad (top) |
+| charger (TP4056/MT3608) GND [via pins] | D1 Mini GND pad (top) |
+| D1 Mini 3V3 [copper enamel wire] | GY-LSM6DS3 VCC (backside) |
+| D1 Mini GND [copper enamel wire] | GY-LSM6DS3 GND (backside) |
+| D1 Mini D2 (GPIO4) [copper enamel wire] | GY-LSM6DS3 SDA (backside) |
+| D1 Mini D1 (GPIO5) [copper enamel wire] | GY-LSM6DS3 SCL (backside) |
+| Toggle switch (SPST) | in series with GND (shield GND → D1 Mini GND) |
 
 ## Battery module (strap-held)
 

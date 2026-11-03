@@ -7,11 +7,13 @@ Build **one tracker end-to-end** before starting the next — it surfaces design
 | Part | Role |
 |---|---|
 | Wemos D1 Mini (ESP8266) | WiFi MCU, runs the firmware |
-| GY-LSM6DS3 | IMU (gyro + accel + e-compass), I²C |
-| 523450 1000 mAh LiPo (with PCM) | Battery (hot-swap, JST-PH) |
-| TP4056 MT3608 BMS board (Supreme ID) | Charger + step-up (3.7V→5V), micro USB |
-| JST-PH 2.0 2-pin connector | Battery hot-swap |
-| Slide switch (SPST) | Power on/off |
+| GY-LSM6DS3 | IMU (gyro + accel + e-compass), I²C — soldered on the backside |
+| 523450 1000 mAh LiPo (with PCM) | Battery (hot-swap, JST-PH on the shield) |
+| Wemos D1 Mini battery shield | Same W×L as D1 Mini, thick (5 mm coil), with battery connector |
+| TP4056 MT3608 BMS board (Supreme ID) | Charger + step-up (3.7V→5V) — soldered via pins to the top of the D1 Mini |
+| Toggle switch (SPST) | Power on/off — in series with GND |
+| Copper enamel wire | IMU wiring (soldered to the backside of the D1 Mini) |
+| Hot glue | Secures the IMU to the backside of the D1 Mini |
 | Hook-up wire (22–26 AWG) | Wiring |
 | Elastic strap (~25 mm) | Retention (wrist/ankle/chest) |
 
@@ -35,40 +37,42 @@ Build **one tracker end-to-end** before starting the next — it surfaces design
 2. **Print the empty case** and verify every part fits (D1 Mini, IMU, battery, power board, switch, USB port). Adjust the CAD if anything is tight.
 3. **Read the wiring netlist** ([03-wiring.md](03-wiring.md)) before you start soldering.
 
-## Phase 2 — Solder the power chain
+## Phase 2 — Assemble the battery shield + charger
 
 Build the power chain first, verify it, then add the IMU.
 
-1. **Solder the JST-PH 2.0 socket** to the TP4056/MT3608 board's `B+` / `B−` pads (battery input).
-2. **Solder the slide switch** in series with the battery line (between the JST-PH socket and the board's `B+`, or between the board's `VOUT+` and the D1 Mini's 5V pin).
-3. **Solder the D1 Mini's 5V + GND** to the TP4056/MT3608 board's `VOUT+` / `GND`.
-4. **Solder the D1 Mini's 3V3 + GND** (for the IMU power — you'll wire the IMU in the next phase).
-5. **Verify the power chain:**
-   - Plug in USB (micro USB to the TP4056/MT3608 board).
-   - Measure `VOUT+` = **5.0V** (under no load).
+1. **Mount the D1 Mini on the battery shield** — the shield is the same W×L as the D1 Mini. Align the D1 Mini's pins with the shield's sockets.
+2. **Solder the charger (TP4056/MT3608) via pins to the top of the D1 Mini** — the charger's 5V, GND, and VIN pins go to the D1 Mini's top pads.
+3. **Solder the toggle switch** in series with GND (between the shield's GND and the D1 Mini's GND).
+4. **Verify the power chain:**
+   - Plug in USB (micro USB to the battery shield).
+   - Measure the shield's 5V output = **5.0V** (under no load).
    - Plug in the JST-PH battery. Measure the battery voltage — it should be **3.7–4.2V**.
-   - Measure `VOUT+` again (under load, with the D1 Mini connected) — it should still be **~5.0V** (a small drop is normal).
+   - Measure the 5V output again (under load, with the D1 Mini connected) — it should still be **~5.0V** (a small drop is normal).
    - The D1 Mini's LED should light (it's getting 5V).
+   - Toggle the switch OFF → the D1 Mini powers off. Toggle ON → it powers back on.
 
-> **If the D1 Mini's LED doesn't light:** check the 5V/GND solder joints, the slide switch (is it ON?), and the battery voltage. Use the multimeter to trace the 5V from the board's `VOUT+` to the D1 Mini's 5V pin.
+> **If the D1 Mini's LED doesn't light:** check the 5V/GND solder joints, the toggle switch (is it ON?), and the battery voltage. Use the multimeter to trace the 5V from the shield to the D1 Mini's 5V pin.
 
-## Phase 3 — Wire the IMU (GY-LSM6DS3)
+## Phase 3 — Solder the IMU (GY-LSM6DS3) on the backside
 
-6. **Wire the GY-LSM6DS3** to the D1 Mini:
+5. **Solder the GY-LSM6DS3** to the backside of the D1 Mini using **copper enamel wire**:
 
-| GY-LSM6DS3 | D1 Mini |
+| GY-LSM6DS3 | D1 Mini (backside) |
 |---|---|
-| VCC (3.3V) | 3V3 |
-| GND | GND |
-| SDA | D2 (GPIO4) |
-| SCL | D1 (GPIO5) |
+| VCC (3.3V) | 3V3 pad |
+| GND | GND pad |
+| SDA | D2 (GPIO4) pad |
+| SCL | D1 (GPIO5) pad |
 
+6. **Hot-glue the IMU** to the backside of the D1 Mini to secure it.
 7. **Confirm the IMU's SDO/SA0 pin** — this sets the I²C address (0x69 or 0x6A). The firmware auto-detects, but it's good to know.
 8. **Verify the I²C connection:**
    - Flash a simple I²C scanner sketch (or use the SlimeVR firmware's boot log) to confirm the IMU is detected at 0x69 or 0x6A.
    - If the IMU isn't detected: check SDA/SCL, 3V3, GND, and the SDO/SA0 connection.
 
 > **A single IMU usually works without external I²C pull-ups.** If you add more I²C devices later, add 4.7kΩ pull-ups on SDA and SCL.
+> **Copper enamel wire** is ideal for this — the enamel insulation prevents shorts between adjacent wires, and it's thin enough to route in tight spaces.
 
 ## Phase 4 — Flash the firmware
 
