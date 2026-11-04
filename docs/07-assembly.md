@@ -8,7 +8,7 @@ Build **one tracker end-to-end** before starting the next — it surfaces design
 |---|---|
 | Wemos D1 Mini (ESP8266) | WiFi MCU, runs the firmware |
 | GY-LSM6DS3 | IMU (gyro + accel + e-compass), I²C — soldered on the backside |
-| 523450 1000 mAh LiPo (with PCM) | Battery (hot-swap, JST-PH on the shield) |
+| Small LiPo (~34×25×5 mm, D1 Mini size) | Battery — wires soldered directly to the shield (no connector) |
 | Wemos D1 Mini battery shield | Same W×L as D1 Mini, thick (5 mm coil), with battery connector |
 | TP4056 MT3608 BMS board (Supreme ID) | Charger + step-up (3.7V→5V) — soldered via pins to the top of the D1 Mini |
 | Toggle switch (SPST) | Power on/off — in series with GND |
@@ -42,17 +42,19 @@ Build **one tracker end-to-end** before starting the next — it surfaces design
 Build the power chain first, verify it, then add the IMU.
 
 1. **Mount the D1 Mini on the battery shield** — the shield is the same W×L as the D1 Mini. Align the D1 Mini's pins with the shield's sockets.
-2. **Solder the charger (TP4056/MT3608) via pins to the top of the D1 Mini** — the charger's 5V, GND, and VIN pins go to the D1 Mini's top pads.
-3. **Solder the toggle switch** in series with GND (between the shield's GND and the D1 Mini's GND).
-4. **Verify the power chain:**
+2. **Solder the small LiPo's wires directly to the shield's B+/B− pads** — no JST-PH connector. The battery is a permanent part of the build.
+3. **Solder the charger (TP4056/MT3608) via pins to the top of the D1 Mini** — the charger's 5V, GND, and VIN pins go to the D1 Mini's top pads.
+4. **Solder the toggle switch** in series with GND (between the shield's GND and the D1 Mini's GND).
+5. **Verify the power chain:**
    - Plug in USB (micro USB to the battery shield).
    - Measure the shield's 5V output = **5.0V** (under no load).
-   - Plug in the JST-PH battery. Measure the battery voltage — it should be **3.7–4.2V**.
+   - Measure the battery voltage — it should be **3.7–4.2V**.
    - Measure the 5V output again (under load, with the D1 Mini connected) — it should still be **~5.0V** (a small drop is normal).
    - The D1 Mini's LED should light (it's getting 5V).
    - Toggle the switch OFF → the D1 Mini powers off. Toggle ON → it powers back on.
 
 > **If the D1 Mini's LED doesn't light:** check the 5V/GND solder joints, the toggle switch (is it ON?), and the battery voltage. Use the multimeter to trace the 5V from the shield to the D1 Mini's 5V pin.
+> **Battery is not hot-swappable** — the small LiPo's wires are soldered directly to the shield. To replace the battery, desolder the wires and solder in a new cell.
 
 ## Phase 3 — Solder the IMU (GY-LSM6DS3) on the backside
 

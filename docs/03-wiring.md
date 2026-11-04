@@ -7,8 +7,8 @@
 **Chosen: D1 Mini battery shield + TP4056/MT3608 charger (soldered on top) + toggle switch**
 
 ```
-Pouch LiPo (+) ──────────────→ battery shield B+
-Pouch LiPo (−) ──────────────→ battery shield B−
+Small LiPo (+) ──[soldered directly]──→ battery shield B+
+Small LiPo (−) ──[soldered directly]──→ battery shield B−
 USB micro (VCC) ─────────────→ battery shield VIN
 USB micro (GND) ─────────────→ battery shield GND
 
@@ -19,7 +19,7 @@ Charger (TP4056/MT3608) ──[pins]──→ D1 Mini top pads (5V, GND, VIN)
 IMU (GY-LSM6DS3) ──[copper enamel wire]──→ D1 Mini backside (3V3, GND, SDA, SCL)
 ```
 
-The **battery shield** is the same W×L as the D1 Mini but thicker (a 5 mm tall coil on the board). It comes with a battery connector (JST-PH). The **charger** (TP4056/MT3608) is soldered via pins to the top of the D1 Mini. The **IMU** (GY-LSM6DS3) is soldered with copper enamel wire and hot-glued to the backside of the D1 Mini. A **toggle switch** (SPST) is in series with GND.
+The **battery shield** is the same W×L as the D1 Mini but thicker (a 5 mm tall coil on the board). The **battery** is a small LiPo (~34×25×5 mm, the size of the D1 Mini) with wires **soldered directly** to the shield's B+/B− pads (no JST-PH connector). The **charger** (TP4056/MT3608) is soldered via pins to the top of the D1 Mini. The **IMU** (GY-LSM6DS3) is soldered with copper enamel wire and hot-glued to the backside of the D1 Mini. A **toggle switch** (SPST) is in series with GND.
 
 > **Do not** power the D1 Mini directly from the 3.7V cell — it needs 5V. The step-up (on the charger) is mandatory.
 > **Set the output to 5.0V** (measure with a multimeter) before connecting the load.
@@ -45,19 +45,19 @@ The battery shield is the same W×L as the D1 Mini, but thicker (5 mm coil). The
 > The Kyware board is NodeMCU-style, so it uses the same **D0–D8** pin labels as a D1 Mini. **Confirm the silkscreen on your exact board** and map to the real GPIOs. If your board labels differ, set the actual GPIO numbers in `defines.h` (see [04-firmware.md](04-firmware.md)).
 > A single IMU usually works without external I²C pull-ups. If you add more I²C devices later, add 4.7kΩ pull-ups on SDA and SCL.
 
-## Hot-swap battery (JST-PH 2.0)
+## Battery connection (direct solder, no connector)
 
-- The pouch cell's **JST-PH plug** mates with a **JST-PH socket** soldered to the board.
-- The socket's two pins go to **TP4056 B+ / B−** (the battery input).
-- Swapping = unplug the dead cell's connector, plug in a charged one. The MT3608 doesn't care which cell is connected — it boosts whatever 3.7V it gets.
-- Add a **retaining clip** in the case so the connector doesn't vibrate loose, and **alignment guides** so it can't be inserted reversed.
+- The small LiPo's wires are **soldered directly** to the battery shield's B+ / B− pads.
+- **No JST-PH connector** — the battery is a permanent part of the build (not hot-swappable).
+- To replace the battery, desolder the wires and solder in a new cell.
+- The small LiPo (~34×25×5 mm) fits alongside the D1 Mini + shield stack, keeping the build compact.
 
 ## Full netlist (per tracker) — battery shield build
 
 | From | To |
 |---|---|
-| LiPo + (via JST-PH on the shield) | battery shield B+ |
-| LiPo − (via JST-PH on the shield) | battery shield B− |
+| Small LiPo + [soldered directly] | battery shield B+ |
+| Small LiPo − [soldered directly] | battery shield B− |
 | USB micro VCC | battery shield VIN |
 | USB micro GND | battery shield GND |
 | battery shield 5V | D1 Mini 5V pin |

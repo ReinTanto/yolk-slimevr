@@ -10,8 +10,8 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | 2 | **IMU (chosen)** | GY-LSM6DS3 6DoF module (LSM6DS3TR-C + e-compass), I²C | **GY-LSM6DS3** (Supreme, Tokopedia) | [GY-LSM6DS3 6DoF module](https://www.tokopedia.com/supreme/gy-lsm6ds3-6dof-6-axis-always-on-e-compass-accelerometer-gyroscope) | ~Rp30.000–50.000 |
 | 2b | IMU (upgrade) | ICM-45686 + QMC6309 breakout, I²C | **SlimeVR Mumo Breakout Module V1.1** | [SlimeVR Mumo Breakout Module V1.1](https://shop.slimevr.dev/products/slimevr-mumo-breakout-module-v1-icm-45686-qmc6309) | ~$8.00 |
 | 2c | IMU (fallback, if GY-BMI160 are found) | GY-BMI160, I²C | GY-BMI160 breakout | (previously owned, misplaced) | — |
-| 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V **1000 mAh**, 523450 (52×34×5 mm) | 523450 1000 mAh (a16com, Tokopedia) | [523450 1000mAh 52×34mm](https://www.tokopedia.com/a16com/baterai-lithium-polimer-1000mah-523450-52x34mm) | ~Rp30.000–40.000 |
-| 3b | Battery (alt, 1500 mAh) | Pouch LiPo 1S 3.7V 1500 mAh, 523450 (52×34×5 mm) | 523450 1500 mAh | (higher-capacity 523450 variant) | ~Rp40.000–55.000 |
+| 3 | **Battery (chosen)** | Pouch LiPo 1S 3.7V, **small (D1 Mini size)**, wires soldered directly to the shield | Small LiPo (~34×25×5 mm) | search Tokopedia: "baterai lipo kecil 3.7v" / "lipo 3.7v small" | ~Rp20.000–40.000 |
+| 3b | Battery (alt, 523450) | Pouch LiPo 1S 3.7V 1000–1500 mAh, 523450 (52×34×5 mm) | 523450 | [523450 1000mAh 52×34mm](https://www.tokopedia.com/a16com/baterai-lithium-polimer-1000mah-523450-52x34mm) | ~Rp30.000–55.000 |
 | 3c | Battery (alt, 2000 mAh) | Pouch LiPo 1S 3.7V 2000 mAh, 103450 (10×34×50 mm) | PALO 103450 | [PALO 103450 2000mAh](https://www.tokopedia.com/palo-baterai/palo-baterai-103450-3-7v-2000mah-baterai-isi-ulang-lithium-polymer-jst-ph-2-0mm-steker-2-pin-untuk-kamera-gps-navigator-headset-bluetooth-1732702005927511145) | Rp69.000 |
 | 4 | **Battery shield (chosen)** | D1 Mini battery shield, same W×L as D1 Mini, thick (5 mm coil), with battery connector | **Wemos D1 Mini battery shield** | search Tokopedia: "wemos d1 mini battery shield" / "d1 mini shield" | ~Rp15.000–30.000 |
 | 4b | Charger (on the shield) | TP4056 + step-up, soldered via pins to the top of the D1 Mini | TP4056 / TP4056+MT3608 module | [TP4056 MT3608 BMS Charger (Supreme ID)](https://www.tokopedia.com/supreme/tp4056-mt3608-li-ion-lipo-bms-charger-dc-dc-boost-converter-micro-usb-power-supply-battery-management-system-1731300325103011443) | Rp9.900 |
@@ -29,15 +29,15 @@ Per-tracker bill of materials with purchase links (Tokopedia). Order **5–6 of 
 | Date | Change | Reason |
 |---|---|---|
 | 2026-11-03 | **Replaced the TP4056/MT3608 combined board with a D1 Mini battery shield** | The original combined board (Supreme ID) had issues (unreliable) and was slightly larger than the D1 Mini. The battery shield is the same W×L as the D1 Mini, but thicker (a 5 mm tall coil on the board). The shield comes with a battery connector (JST-PH). Attempted to desolder the connector to save space, but it only saves 1 mm because of the 5 mm coil. The charger (TP4056/MT3608) is now soldered via pins to the top of the D1 Mini. The IMU (GY-LSM6DS3) is soldered with copper enamel wire and hot-glued to the backside of the D1 Mini. A **toggle switch** (SPST) is in series with GND. |
+| 2026-11-04 | **Changed the battery to a small cell (D1 Mini size), wires soldered directly to the shield** | The 523450 (52×34×5 mm) was too large for the compact build. Replaced with a small LiPo (~34×25×5 mm, the size of the D1 Mini). The battery's wires are soldered **directly** to the battery shield's B+/B− pads (no JST-PH connector). This makes the build more compact — the battery fits alongside the D1 Mini + shield stack. |
 
 ## Cost estimate
 
 | Scenario | Per tracker | 5 trackers |
 |---|---|---|
-| **Chosen (D1 Mini + GY-LSM6DS3 + 523450 1000mAh + TP4056/MT3608 combined)** | ~Rp90.000–130.000 | ~Rp450.000–650.000 |
-| Upgrade (ICM-45686 Mumo + 523450 1000mAh + TP4056/MT3608 combined) | ~Rp115.000–135.000 | ~Rp575.000–675.000 |
-| With separate TP4056 + MT3608 (instead of combined) | −Rp3.000–5.000 | −Rp15.000–25.000 |
-| With 523450 1500mAh | +Rp10.000–20.000 | +Rp50.000–100.000 |
+| **Chosen (D1 Mini + GY-LSM6DS3 + small LiPo + battery shield + TP4056/MT3608)** | ~Rp100.000–140.000 | ~Rp500.000–700.000 |
+| Upgrade (ICM-45686 Mumo + small LiPo + battery shield + TP4056/MT3608) | ~Rp135.000–175.000 | ~Rp675.000–875.000 |
+| With 523450 1000mAh (instead of small LiPo) | +Rp10.000–20.000 | +Rp50.000–100.000 |
 | With PALO 2000mAh (103450) | +Rp30.000–40.000 | +Rp150.000–200.000 |
 
 (Excludes the MCU, which is owned. IMU + battery are purchases — see the recommendations above.)

@@ -11,8 +11,8 @@ The case is designed from scratch in a CAD package (Fusion 360 / FreeCAD / Solid
 | Wemos D1 Mini (ESP8266) | 34.2 × 25.6 × ~3 |
 | D1 Mini battery shield | Same W×L as D1 Mini (34.2 × 25.6), thick (~8–10 mm with the 5 mm coil) |
 | GY-LSM6DS3 | ~20 × 20 × 3 (soldered on the backside of the D1 Mini) |
-| Pouch cell 523450 (chosen, 1000 mAh) | 52 × 34 × 5 (L×W×T) |
-| Pouch cell 523450 (alt, 1500 mAh) | 52 × 34 × 5 (L×W×T) |
+| Small LiPo (chosen, D1 Mini size) | ~34 × 25 × 5 (L×W×T), wires soldered directly to the shield |
+| Pouch cell 523450 (alt, 1000–1500 mAh) | 52 × 34 × 5 (L×W×T) |
 | Pouch cell PALO 103450 (alt, 2000 mAh) | 10 × 34 × 50 |
 | TP4056/MT3608 charger (on top) | ~27 × 17 × 5 (soldered via pins to the D1 Mini top) |
 | JST-PH 2.0 socket (on the shield) | ~10 × 8 × 8 |
