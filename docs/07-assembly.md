@@ -1,6 +1,13 @@
 # 07 — Assembly, Testing & Setup
 
-Build **one tracker end-to-end** before starting the next — it surfaces design/wiring problems early. This guide covers assembly, testing, and server setup for the **D1 Mini + GY-LSM6DS3 + 523450 + TP4056/MT3608** build.
+Build **one tracker end-to-end** before starting the next — it surfaces design/wiring problems early. This guide covers assembly, testing, and server setup for the **D1 Mini + GY-LSM6DS3 + small LiPo + battery shield + TP4056/MT3608** build.
+
+> **3D print results:**
+> - [`media/3d print result top isometric view.jpeg`](../media/3d%20print%20result%20top%20isometric%20view.jpeg) — printed case, top isometric
+> - [`media/3d print result top view, charging led visible.jpeg`](../media/3d%20print%20result%20top%20view%2C%20charging%20led%20visible.jpeg) — top view, charging LED visible
+> - [`media/3d printed result with pcb half assembled in it.jpeg`](../media/3d%20printed%20result%20with%20pcb%20half%20assembled%20in%20it.jpeg) — PCB half-assembled in the case
+> - [`media/3d printed result with pcb hanging off it, corner isometric view.jpeg`](../media/3d%20printed%20result%20with%20pcb%20hanging%20off%20it%2C%20corner%20isometric%20view.jpeg) — PCB hanging off, corner isometric
+> - [`media/Front view 3d printed result assembled.jpeg`](../media/Front%20view%203d%20printed%20result%20assembled.jpeg) — front view, fully assembled
 
 ## Parts you'll use (per tracker)
 

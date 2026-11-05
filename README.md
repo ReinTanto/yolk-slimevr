@@ -43,6 +43,8 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 
 - **IMU soldered:** [`media/imu-soldered.jpg`](media/imu-soldered.jpg) — GY-LSM6DS3 soldered to the backside of the D1 Mini with copper enamel wire.
 - **Build demo:** [`media/build-demo.mp4`](media/build-demo.mp4) — full soldered unit (no case) demonstrated with SlimeVR running on the PC.
+- **CAD renders:** [`media/3d case isometric top view linework.png`](media/3d%20case%20isometric%20top%20view%20linework.png), [`media/3d case Isometric view above.png`](media/3d%20case%20Isometric%20view%20above.png), [`media/3d case bottom isometric view.png`](media/3d%20case%20bottom%20isometric%20view.png), [`media/3d case bottom view, interior.png`](media/3d%20case%20bottom%20view%2C%20interior.png)
+- **3D print results:** [`media/3d print result top isometric view.jpeg`](media/3d%20print%20result%20top%20isometric%20view.jpeg), [`media/3d print result top view, charging led visible.jpeg`](media/3d%20print%20result%20top%20view%2C%20charging%20led%20visible.jpeg), [`media/3d printed result with pcb half assembled in it.jpeg`](media/3d%20printed%20result%20with%20pcb%20half%20assembled%20in%20it.jpeg), [`media/3d printed result with pcb hanging off it, corner isometric view.jpeg`](media/3d%20printed%20result%20with%20pcb%20hanging%20off%20it%2C%20corner%20isometric%20view.jpeg), [`media/Front view 3d printed result assembled.jpeg`](media/Front%20view%203d%20printed%20result%20assembled.jpeg)
 
 ## Status
 
