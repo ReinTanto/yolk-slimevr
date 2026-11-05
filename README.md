@@ -1,8 +1,8 @@
 # yolk-slimevr
 
-DIY SlimeVR full-body tracking (FBT) build using **GY-LSM6DS3** IMUs, **ESP8266** microcontrollers, and **pouch LiPo** batteries in **3D-printed** cases, with a **strap-held battery module** for tool-free cell swaps.
+DIY SlimeVR full-body tracking (FBT) build using **GY-LSM6DS3** IMUs, **Wemos D1 Mini** (ESP8266) microcontrollers, and **built-in small LiPo** batteries (2000 mAh, D1 Mini size) in **3D-printed** cases.
 
-This repo documents the complete plan, parts list (with purchase links), wiring, firmware, calibration, and case design for a 5-tracker SlimeVR setup.
+This repo documents the complete plan, parts list (with purchase links), wiring, firmware, calibration, and case design for a SlimeVR tracker setup.
 
 > **Working on a tracker? Start with [FLASH_AND_USE.md](FLASH_AND_USE.md)** — the end-to-end agent guide: flashing firmware (incl. the `IMU_AUTO` gotcha), diagnosing the failure modes found in the first build, and using the tracker after flashing.
 
@@ -25,19 +25,15 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 
 | Part | Pick |
 |---|---|
-| MCU | Kyware ESP8266 (NodeMCU-style, CH340, micro USB + Type-C) |
-| IMU | **GY-LSM6DS3** (LSM6DS3TR-C 6DoF + e-compass, I²C — Tokopedia) — *upgrade: ICM-45686 Mumo* |
-| Battery | Small LiPo 1S 3.7V (~34×25×5 mm, D1 Mini size, wires soldered directly to the shield) |
-| Charger + step-up | TP4056 + MT3608 combined board (Supreme ID, micro USB, with protection) |
+| MCU | **Wemos D1 Mini** (ESP8266, micro USB) |
+| IMU | **GY-LSM6DS3** (LSM6DS3TR-C 6DoF + e-compass, I²C) — soldered on the backside |
+| Battery | **Built-in small LiPo** (2000 mAh, ~34×25×5 mm, D1 Mini size) — wires soldered directly to the shield |
+| Battery shield | **Wemos D1 Mini battery shield** — soldered directly onto the D1 Mini |
+| Charger | **TP4056** (on the shield) — micro USB, accessible from outside the case |
+| Power switch | **Toggle switch** — between the shield GND and D1 GND, accessible from outside |
 | Case | 3D-printed (designed around the parts) |
-| Battery module | 3D-printed strap-held cradle (holds the removable cell; strap retains it) |
 
-> The original GY-BMI160s were misplaced, so the IMU is now a purchase. The **GY-LSM6DS3** (LSM6DS3TR-C, supported in firmware as `IMU_LSM6DS3TRC`, cheap on Tokopedia) is chosen; the ICM-45686 is the upgrade path. See [docs/02-parts-list.md](docs/02-parts-list.md).
-
-## Tracker count
-
-- **5 trackers** for full-body tracking (chest, 2 wrists, 2 ankles)
-- **1 tracker** for chest-only
+> The **Wemos D1 Mini battery shield** is soldered directly onto the D1 Mini. The **TP4056 charger** is on the shield. The **battery** is a small built-in LiPo (2000 mAh, D1 Mini size) with wires soldered directly to the shield — not hot-swappable. A **toggle switch** between the shield GND and D1 GND turns the device on/off, accessible from outside the case. Both the **charging USB port** and the **D1 Mini USB port** are accessible from outside. See [docs/02-parts-list.md](docs/02-parts-list.md).
 
 ## Media
 
