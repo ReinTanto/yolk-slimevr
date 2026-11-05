@@ -63,9 +63,9 @@ This repo documents the complete plan, parts list (with purchase links), wiring,
 
 ### Build
 
-| IMU soldered (backside) | Front view, assembled |
+| IMU soldered (backside) | Final product (3D printed case, assembled) |
 |---|---|
-| ![IMU soldered](media/imu-soldered.jpg) | ![Front view assembled](media/Front%20view%203d%20printed%20result%20assembled.jpeg) |
+| ![IMU soldered](media/imu-soldered.jpg) | ![Final product, assembled](media/Front%20view%203d%20printed%20result%20assembled.jpeg) |
 
 - **Build demo (video):** [`media/build-demo.mp4`](media/build-demo.mp4) — full soldered unit (no case) demonstrated with SlimeVR running on the PC.
 
