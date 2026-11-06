@@ -1,119 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="app.diagrams.net" agent="yolk-slimevr" version="24.7.7">
-  <diagram id="yolk-case" name="Elongated Case (wrist/ankle)">
-    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+  <diagram id="yolk-case" name="Stacked Case (wrist/ankle)">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
 
         <!-- Title -->
-        <mxCell id="title" value="yolk-slimevr — Elongated Case (wrist / ankle)" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="title" value="yolk-slimevr — Stacked Case (wrist / ankle)" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="280" y="20" width="600" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Top-down + side view. Battery bay along the long axis; electronics stacked on one side." style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#666666" vertex="1" parent="1">
+        <mxCell id="subtitle" value="Top-down + side view. All layers stacked; switch offset on the short side." style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#666666" vertex="1" parent="1">
           <mxGeometry x="280" y="50" width="600" height="20" as="geometry" />
         </mxCell>
 
         <!-- ===== TOP-DOWN VIEW ===== -->
-        <mxCell id="td_label" value="Top-down view" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="100" y="90" width="200" height="20" as="geometry" />
+        <mxCell id="td_label" value="Top-down view (looking at the shield)" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="90" width="300" height="20" as="geometry" />
         </mxCell>
 
-        <!-- Case outline (elongated, rounded) -->
-        <mxCell id="case_td" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;strokeWidth=3;arcSize=20" vertex="1" parent="1">
-          <mxGeometry x="100" y="120" width="500" height="160" as="geometry" />
+        <!-- Case outline (D1 Mini footprint + margin) -->
+        <mxCell id="case_td" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;strokeWidth=3;arcSize=15" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="200" height="160" as="geometry" />
         </mxCell>
 
-        <!-- Battery bay (recessed, along long axis) -->
-        <mxCell id="batt_td" value="Battery bay&#10;52 × 34 × 5 mm&#10;(recessed slot)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="120" y="150" width="260" height="100" as="geometry" />
+        <!-- Shield (top layer, fills the case) -->
+        <mxCell id="shield_td" value="Battery Shield&#10;(TP4056 + coil)&#10;[TOP LAYER]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="135" width="170" height="130" as="geometry" />
         </mxCell>
 
-        <!-- JST-PH socket (access side) -->
-        <mxCell id="jst_td" value="JST-PH&#10;[socket]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10" vertex="1" parent="1">
-          <mxGeometry x="120" y="260" width="80" height="30" as="geometry" />
+        <!-- USB micro (charging, on shield) -->
+        <mxCell id="usb_micro_td" value="USB micro&#10;(charging)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="125" y="145" width="50" height="40" as="geometry" />
         </mxCell>
 
-        <!-- Electronics stack (one side) -->
-        <mxCell id="elec_td" value="Electronics stack&#10;[D1 Mini] [IMU] [Power]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="400" y="150" width="180" height="100" as="geometry" />
+        <!-- Toggle switch (offset on the short side) -->
+        <mxCell id="sw_td" value="Toggle&#10;switch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="285" y="170" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="sw_note" value="offset on short side" style="text;html=1;align=left;verticalAlign=middle;fontSize=9;fontColor=#b85450" vertex="1" parent="1">
+          <mxGeometry x="320" y="190" width="100" height="16" as="geometry" />
         </mxCell>
 
-        <!-- Slide switch (side wall) -->
-        <mxCell id="sw_td" value="Switch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10" vertex="1" parent="1">
-          <mxGeometry x="400" y="260" width="60" height="30" as="geometry" />
-        </mxCell>
-
-        <!-- USB port (side wall) -->
-        <mxCell id="usb_td" value="USB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10" vertex="1" parent="1">
-          <mxGeometry x="480" y="260" width="60" height="30" as="geometry" />
-        </mxCell>
-
-        <!-- Strap channel (full length) -->
-        <mxCell id="strap_td" value="Strap channel (full length)" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#999999" vertex="1" parent="1">
-          <mxGeometry x="100" y="295" width="500" height="16" as="geometry" />
+        <!-- USB Type-C (on D1, accessible from outside) -->
+        <mxCell id="usb_typec_td" value="USB Type-C&#10;(flashing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="125" y="225" width="50" height="40" as="geometry" />
         </mxCell>
 
         <!-- Dimension labels -->
-        <mxCell id="dim_len" value="~110 mm" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666" vertex="1" parent="1">
-          <mxGeometry x="280" y="100" width="80" height="16" as="geometry" />
+        <mxCell id="dim_w" value="~38 mm" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="150" y="100" width="80" height="16" as="geometry" />
         </mxCell>
-        <mxCell id="dim_wid" value="~50 mm" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666" vertex="1" parent="1">
-          <mxGeometry x="610" y="190" width="60" height="16" as="geometry" />
+        <mxCell id="dim_l" value="~29 mm" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="310" y="190" width="60" height="16" as="geometry" />
         </mxCell>
 
-        <!-- ===== SIDE VIEW ===== -->
-        <mxCell id="sv_label" value="Side view (cross-section)" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="100" y="340" width="200" height="20" as="geometry" />
+        <!-- ===== SIDE VIEW (STACK) ===== -->
+        <mxCell id="sv_label" value="Side view (stack, top → bottom)" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="90" width="300" height="20" as="geometry" />
         </mxCell>
 
         <!-- Case side outline -->
-        <mxCell id="case_sv" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;strokeWidth=3;arcSize=15" vertex="1" parent="1">
-          <mxGeometry x="100" y="370" width="500" height="100" as="geometry" />
+        <mxCell id="case_sv" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;strokeWidth=3;arcSize=10" vertex="1" parent="1">
+          <mxGeometry x="500" y="120" width="200" height="280" as="geometry" />
         </mxCell>
 
-        <!-- Battery (flat, in the bay) -->
-        <mxCell id="batt_sv" value="523450 (5 mm thick)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10" vertex="1" parent="1">
-          <mxGeometry x="120" y="410" width="260" height="20" as="geometry" />
+        <!-- TOP: Battery Shield -->
+        <mxCell id="shield_sv" value="Battery Shield&#10;(TP4056 + 5mm coil)&#10;~8–10 mm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="510" y="130" width="180" height="50" as="geometry" />
         </mxCell>
 
-        <!-- Electronics stack (on top of the battery) -->
-        <mxCell id="elec_sv" value="Electronics stack (~10–12 mm)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10" vertex="1" parent="1">
-          <mxGeometry x="400" y="390" width="180" height="40" as="geometry" />
+        <!-- MIDDLE: D1 Mini + IMU -->
+        <mxCell id="d1_sv" value="D1 Mini + IMU&#10;(soldered on backside)&#10;~3–5 mm" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="510" y="185" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Toggle switch (offset, between shield GND and D1 GND) -->
+        <mxCell id="sw_sv" value="Switch&#10;(offset)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="690" y="190" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- BOTTOM: Battery (skin-facing) -->
+        <mxCell id="batt_sv" value="Built-in LiPo&#10;(2000 mAh, D1 Mini size)&#10;~5 mm — skin-facing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="510" y="230" width="180" height="50" as="geometry" />
         </mxCell>
 
         <!-- Total height label -->
-        <mxCell id="dim_h" value="~15–18 mm total" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666" vertex="1" parent="1">
-          <mxGeometry x="280" y="475" width="120" height="16" as="geometry" />
+        <mxCell id="dim_h" value="~18–22 mm total" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="550" y="310" width="120" height="16" as="geometry" />
         </mxCell>
 
         <!-- ===== NOTES ===== -->
         <mxCell id="notes_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;" vertex="1" parent="1">
-          <mxGeometry x="100" y="510" width="700" height="200" as="geometry" />
+          <mxGeometry x="100" y="420" width="700" height="250" as="geometry" />
         </mxCell>
         <mxCell id="notes_title" value="Case design notes" style="text;html=1;align=left;verticalAlign=middle;fontSize=13;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="115" y="515" width="200" height="20" as="geometry" />
+          <mxGeometry x="115" y="425" width="200" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="notes1" value="• Elongated shape follows the 523450 battery's natural length (52 mm) — more comfortable than a fat-square box" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="540" width="670" height="20" as="geometry" />
+        <mxCell id="notes1" value="• Stacked layout: TOP = Battery Shield (TP4056), MIDDLE = D1 Mini + IMU, BOTTOM = Battery (skin-facing)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="450" width="670" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="notes2" value="• Rounded edges (arcSize 15–20) so the case conforms to the wrist/ankle instead of digging in" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="562" width="670" height="20" as="geometry" />
+        <mxCell id="notes2" value="• Toggle switch: between D1 GND and Shield GND, offset on the short side, accessible from outside" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="472" width="670" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="notes3" value="• Battery bay: recessed slot along the long axis with a small lip to hold the cell; JST-PH socket on the access side" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="584" width="670" height="20" as="geometry" />
+        <mxCell id="notes3" value="• Battery: built-in 2000 mAh LiPo (D1 Mini size), wires soldered directly to shield B+/B− (no JST-PH)" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="494" width="670" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="notes4" value="• Electronics (D1 Mini, IMU, power board) stacked on one side of the battery to keep the case slim" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="606" width="670" height="20" as="geometry" />
+        <mxCell id="notes4" value="• USB micro (on shield) = charging; USB Type-C (on D1 Mini) = flashing only — both accessible from outside" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="516" width="670" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="notes5" value="• Strap channel runs the full length of the case (~25–30 mm wide); the strap wraps the forearm, not just the case" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="628" width="670" height="20" as="geometry" />
+        <mxCell id="notes5" value="• Rounded edges so the case conforms to the wrist/ankle instead of digging in" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="538" width="670" height="20" as="geometry" />
         </mxCell>
         <mxCell id="notes6" value="• 0.2 mm clearance per side on the D1 Mini fit; LED window over the status LED; reset access (2 mm hole) aligned with RST" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="650" width="670" height="20" as="geometry" />
+          <mxGeometry x="115" y="560" width="670" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="notes7" value="• Ventilation: 3–4 × 2 mm holes (D1 Mini + MT3608 get warm); two-tone print (black body + colored accent) to identify trackers" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
-          <mxGeometry x="115" y="672" width="670" height="20" as="geometry" />
+        <mxCell id="notes7" value="• Ventilation: 3–4 × 2 mm holes (D1 Mini + TP4056 get warm); two-tone print (black body + colored accent) to identify trackers" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="582" width="670" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="notes8" value="• Strap channel on the outer wall; the strap wraps the forearm, not just the case" style="text;html=1;align=left;verticalAlign=middle;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="115" y="604" width="670" height="20" as="geometry" />
         </mxCell>
 
       </root>
